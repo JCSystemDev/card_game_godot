@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdva2bikc7w1t"
-path="res://.godot/imported/Backgrounds14.png-965c32d875a0fddebedd55151e6356e7.ctex"
+uid="uid://ddpgtyuf5muqp"
+path="res://.godot/imported/Wasteland.png-089163ff15a3659680c44044a9f732e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Backgrounds/Backgrounds14.png"
-dest_files=["res://.godot/imported/Backgrounds14.png-965c32d875a0fddebedd55151e6356e7.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/Wasteland.png"
+dest_files=["res://.godot/imported/Wasteland.png-089163ff15a3659680c44044a9f732e3.ctex"]
 
 [params]
 

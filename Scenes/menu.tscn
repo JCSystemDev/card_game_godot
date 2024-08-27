@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_ci7q1"]
 [ext_resource type="Texture2D" uid="uid://ci8galvencmjh" path="res://Assets/Sprites/UI/title.png" id="1_psfbt"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="2_ldngs"]
-[ext_resource type="Texture2D" uid="uid://c2jsowbupc5fg" path="res://Assets/Sprites/Backgrounds/Backgrounds7.png" id="4_1e2ju"]
+[ext_resource type="Texture2D" uid="uid://cfid5nmmc4na1" path="res://Assets/Sprites/Backgrounds/Backgrounds7.png" id="4_1e2ju"]
 [ext_resource type="Texture2D" uid="uid://b61mv2e41bsd2" path="res://Assets/Sprites/Templates/Buttons BG.png" id="4_qy6sm"]
 [ext_resource type="Theme" uid="uid://whtf1cxg48ud" path="res://Styles/button.tres" id="4_shvku"]
 [ext_resource type="Texture2D" uid="uid://bs5q6wkkxss60" path="res://Assets/Sprites/Templates/Buttons Marquee.png" id="5_kqaxc"]

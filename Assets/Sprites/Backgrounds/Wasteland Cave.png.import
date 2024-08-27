@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpdhwsdhohwwb"
-path="res://.godot/imported/Backgrounds13.png-77d0bface0a1deca8e0dc69c4d9344f0.ctex"
+uid="uid://bero6jvrf7lhh"
+path="res://.godot/imported/Wasteland Cave.png-132f3075113f0467097fcf1a353a19d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Backgrounds/Backgrounds13.png"
-dest_files=["res://.godot/imported/Backgrounds13.png-77d0bface0a1deca8e0dc69c4d9344f0.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/Wasteland Cave.png"
+dest_files=["res://.godot/imported/Wasteland Cave.png-132f3075113f0467097fcf1a353a19d9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqahkf1m306rf"
-path="res://.godot/imported/Backgrounds20.png-58bb343fc344a6263fd961c02afba89d.ctex"
+uid="uid://ce3nkesl4v6vv"
+path="res://.godot/imported/Sea.png-2d8822c4b2c3c6a6ebbe351458e35232.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Backgrounds/Backgrounds20.png"
-dest_files=["res://.godot/imported/Backgrounds20.png-58bb343fc344a6263fd961c02afba89d.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/Sea.png"
+dest_files=["res://.godot/imported/Sea.png-2d8822c4b2c3c6a6ebbe351458e35232.ctex"]
 
 [params]
 

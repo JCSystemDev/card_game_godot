@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baaf407q42xoo"
-path="res://.godot/imported/Backgrounds24.png-460ecc4bc082b8f47ec5b10c4b95124c.ctex"
+uid="uid://dv00hu7krx50u"
+path="res://.godot/imported/Ice Dungeon.png-737bb8128ca08b12fbadb679c76256e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Backgrounds/Backgrounds24.png"
-dest_files=["res://.godot/imported/Backgrounds24.png-460ecc4bc082b8f47ec5b10c4b95124c.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/Ice Dungeon.png"
+dest_files=["res://.godot/imported/Ice Dungeon.png-737bb8128ca08b12fbadb679c76256e4.ctex"]
 
 [params]
 

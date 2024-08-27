@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c68t4267lnlty"
-path="res://.godot/imported/Backgrounds19.png-383bf03f53d0b21a3a4c56ad1d93d400.ctex"
+uid="uid://c1ave6v0ulh8y"
+path="res://.godot/imported/Airship.png-0117464cb6a2b81222206ce21ea4ab1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Backgrounds/Backgrounds19.png"
-dest_files=["res://.godot/imported/Backgrounds19.png-383bf03f53d0b21a3a4c56ad1d93d400.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/Airship.png"
+dest_files=["res://.godot/imported/Airship.png-0117464cb6a2b81222206ce21ea4ab1f.ctex"]
 
 [params]
 

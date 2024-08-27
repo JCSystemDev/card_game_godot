@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0pqs2cg1jwiy"
-path="res://.godot/imported/Backgrounds10.png-bab5f70e52df6a40fb90f51c93d83466.ctex"
+uid="uid://cuml0yt1j1unf"
+path="res://.godot/imported/Mountain Cave.png-f277a150b22dc1be7d5f05b95743c0ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Backgrounds/Backgrounds10.png"
-dest_files=["res://.godot/imported/Backgrounds10.png-bab5f70e52df6a40fb90f51c93d83466.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/Mountain Cave.png"
+dest_files=["res://.godot/imported/Mountain Cave.png-f277a150b22dc1be7d5f05b95743c0ee.ctex"]
 
 [params]
 

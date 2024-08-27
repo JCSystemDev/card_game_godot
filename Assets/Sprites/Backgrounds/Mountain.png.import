@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drsn4puuu82r6"
-path="res://.godot/imported/Backgrounds17.png-d58f4fb48a83a0bdb822f1bbb5b68639.ctex"
+uid="uid://b8v66cj7tv4e7"
+path="res://.godot/imported/Mountain.png-6d94d8303ac514f0a498e4383cdda1aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Backgrounds/Backgrounds17.png"
-dest_files=["res://.godot/imported/Backgrounds17.png-d58f4fb48a83a0bdb822f1bbb5b68639.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/Mountain.png"
+dest_files=["res://.godot/imported/Mountain.png-6d94d8303ac514f0a498e4383cdda1aa.ctex"]
 
 [params]
 
