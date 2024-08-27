@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://cyvoco1nboqyu"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_ci7q1"]
+[ext_resource type="Texture2D" uid="uid://ci8galvencmjh" path="res://Assets/Sprites/UI/title.png" id="1_psfbt"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="2_ldngs"]
+[ext_resource type="Texture2D" uid="uid://c2jsowbupc5fg" path="res://Assets/Sprites/Backgrounds/Backgrounds7.png" id="4_1e2ju"]
+[ext_resource type="Texture2D" uid="uid://b61mv2e41bsd2" path="res://Assets/Sprites/Templates/Buttons BG.png" id="4_qy6sm"]
+[ext_resource type="Theme" uid="uid://whtf1cxg48ud" path="res://Styles/button.tres" id="4_shvku"]
+[ext_resource type="Texture2D" uid="uid://bs5q6wkkxss60" path="res://Assets/Sprites/Templates/Buttons Marquee.png" id="5_kqaxc"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ci7q1")
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="BG" type="Sprite2D" parent="Buttons"]
+modulate = Color(0.331918, 0.100439, 0.0225118, 1)
+position = Vector2(480, 364)
+scale = Vector2(6, 4)
+texture = ExtResource("4_qy6sm")
+
+[node name="Marquee" type="Sprite2D" parent="Buttons"]
+position = Vector2(480, 364)
+scale = Vector2(6, 4)
+texture = ExtResource("5_kqaxc")
+
+[node name="Start Game" type="Button" parent="Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 376.0
+offset_top = 320.0
+offset_right = 636.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("4_shvku")
+theme_override_fonts/font = ExtResource("2_ldngs")
+text = "BATTLE CARD"
+
+[node name="Quit Game" type="Button" parent="Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 376.0
+offset_top = 368.0
+offset_right = 636.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme_override_fonts/font = ExtResource("2_ldngs")
+text = "QUIT GAME"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(480, 160)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_psfbt")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(512, 400)
+scale = Vector2(4, 4)
+texture = ExtResource("4_1e2ju")
+
+[connection signal="pressed" from="Buttons/Start Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Buttons/Quit Game" to="." method="_on_quit_game_pressed"]

@@ -1,0 +1,42 @@
+[
+   {
+	  "card_name":"Gold Sword",  
+	  "card_type":"Attack",
+	  "card_subtype":"+",	
+	  "number_effect":2,
+	  "card_cost":3,
+	  "card_sprite":"res://Assets/Sprites/Icons/Icons348.png"
+   },
+   {
+	  "card_name":"Gold Armor",  
+	  "card_type":"Defense",
+	  "card_subtype":"+",
+	  "number_effect":3,
+	  "card_cost":4,
+	  "card_sprite":"res://Assets/Sprites/Icons/Icons4.png"
+   },
+   {
+	  "card_name":"Cure",  
+	  "card_type":"HP",
+	  "card_subtype":"+",	
+	  "number_effect":10,
+	  "card_cost":3,
+	  "card_sprite":"res://Assets/Sprites/Icons/Icons50.png"
+   },
+   {
+	  "card_name":"Gold Helmet",  
+	  "card_type":"Defense",
+	  "card_subtype":"+",	
+	  "number_effect":1,
+	  "card_cost":2,
+	  "card_sprite":"res://Assets/Sprites/Icons/Icons191.png"
+   },
+   {
+	  "card_name":"Gold Shield",  
+	  "card_type":"Defense",
+	  "card_subtype":"+",	
+	  "number_effect":2,
+	  "card_cost":3,
+	  "card_sprite":"res://Assets/Sprites/Icons/Icons288.png"
+   }
+]

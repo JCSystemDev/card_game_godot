@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://34vxh4p7u574"]
+
+[ext_resource type="Script" path="res://Scripts/deck.gd" id="1_8be41"]
+[ext_resource type="Texture2D" uid="uid://ctr3cnu846sc4" path="res://Assets/Sprites/Cardbacks/Cardback2.png" id="2_mjemx"]
+[ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="3_kxy6k"]
+
+[node name="Deck" type="Node2D"]
+script = ExtResource("1_8be41")
+
+[node name="Deck Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_mjemx")
+
+[node name="Deck Cards" type="Label" parent="."]
+texture_filter = 1
+offset_left = -27.0
+offset_top = 66.0
+offset_right = 27.0
+offset_bottom = 82.0
+text = "D: 99"
+label_settings = ExtResource("3_kxy6k")
+horizontal_alignment = 1
+vertical_alignment = 1

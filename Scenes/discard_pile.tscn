@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbxp7761bc86l"]
+
+[ext_resource type="Script" path="res://Scripts/discard_pile.gd" id="1_iwvkm"]
+[ext_resource type="Texture2D" uid="uid://dp2b16vcemmx8" path="res://Assets/Sprites/Cardbacks/Cardback7.png" id="1_rnj85"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="2_qym34"]
+[ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="3_0mix3"]
+
+[node name="Discard Pile" type="Node2D"]
+script = ExtResource("1_iwvkm")
+
+[node name="Discard Pile Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -27.0
+offset_top = 66.0
+offset_right = 27.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("2_qym34")
+text = "P: 99"
+label_settings = ExtResource("3_0mix3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Discard Pile Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_rnj85")

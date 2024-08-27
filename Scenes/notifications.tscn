@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://0eq60ymgekep"]
+
+[ext_resource type="Script" path="res://Scripts/notifications.gd" id="1_nx5iy"]
+[ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="1_yb7xe"]
+[ext_resource type="Texture2D" uid="uid://b61mv2e41bsd2" path="res://Assets/Sprites/Templates/Buttons BG.png" id="2_xbr65"]
+[ext_resource type="Texture2D" uid="uid://bs5q6wkkxss60" path="res://Assets/Sprites/Templates/Buttons Marquee.png" id="3_wtk74"]
+[ext_resource type="Theme" uid="uid://whtf1cxg48ud" path="res://Styles/button.tres" id="4_f1tme"]
+
+[node name="Notifications" type="Node2D"]
+visible = false
+position = Vector2(320, 100)
+scale = Vector2(3, 3)
+script = ExtResource("1_nx5iy")
+
+[node name="Endgame Notification" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Endgame Notification"]
+offset_left = -50.6667
+offset_top = 1.0
+offset_right = 157.333
+offset_bottom = 24.0
+text = "END GAME"
+label_settings = ExtResource("1_yb7xe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BG" type="Node2D" parent="Endgame Notification"]
+position = Vector2(0, 3)
+
+[node name="Background" type="Sprite2D" parent="Endgame Notification/BG"]
+modulate = Color(0.333407, 0, 0, 1)
+position = Vector2(53, 44)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_xbr65")
+
+[node name="Marquee" type="Sprite2D" parent="Endgame Notification/BG"]
+position = Vector2(53, 44)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_wtk74")
+
+[node name="Buttons" type="Node2D" parent="Endgame Notification"]
+
+[node name="Retry Button" type="Button" parent="Endgame Notification/Buttons"]
+offset_left = 31.6667
+offset_top = 28.6667
+offset_right = 74.6667
+offset_bottom = 44.6667
+theme = ExtResource("4_f1tme")
+theme_override_font_sizes/font_size = 5
+text = "RETRY"
+
+[node name="Exit Button" type="Button" parent="Endgame Notification/Buttons"]
+offset_left = 35.3333
+offset_top = 47.0
+offset_right = 71.3333
+offset_bottom = 63.0
+theme = ExtResource("4_f1tme")
+theme_override_font_sizes/font_size = 5
+text = "EXIT"
+
+[connection signal="pressed" from="Endgame Notification/Buttons/Retry Button" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="Endgame Notification/Buttons/Exit Button" to="." method="_on_exit_button_pressed"]
