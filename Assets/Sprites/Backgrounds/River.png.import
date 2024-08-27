@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu6c7qm3qoh3n"
-path="res://.godot/imported/Basic Enemies Portait0.png-7df2a80c8c76526d17835e771f210f9b.ctex"
+uid="uid://8patniq2ii8o"
+path="res://.godot/imported/River.png-3caf553435ecd120dac9c895fe1fe981.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait0.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait0.png-7df2a80c8c76526d17835e771f210f9b.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/River.png"
+dest_files=["res://.godot/imported/River.png-3caf553435ecd120dac9c895fe1fe981.ctex"]
 
 [params]
 

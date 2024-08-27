@@ -4,7 +4,7 @@
 		"enemy_hp":30,
 		"enemy_attack":10,
 		"enemy_defense":3,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait2.png",
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Slime.png",
 		"enemy_level":1,
 		"enemy_background":"res://Assets/Sprites/Backgrounds/Meadow.png"
 	},
@@ -13,7 +13,7 @@
 		"enemy_hp":40,
 		"enemy_attack":12,
 		"enemy_defense":4,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait0.png",
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Gnome.png",
 		"enemy_level":2,
 		"enemy_background":"res://Assets/Sprites/Backgrounds/Forest.png"
 	},
@@ -22,7 +22,7 @@
 		"enemy_hp":45,
 		"enemy_attack":15,
 		"enemy_defense":5,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait1.png",
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Haunted Tree.png",
 		"enemy_level":3,
 		"enemy_background":"res://Assets/Sprites/Backgrounds/Desert Forest.png"
 	},
@@ -31,7 +31,7 @@
 		"enemy_hp":48,
 		"enemy_attack":16,
 		"enemy_defense":8,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait3.png",
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Venom Frog.png",
 		"enemy_level":4,
 		"enemy_background":"res://Assets/Sprites/Backgrounds/Cave.png"
 		
@@ -41,63 +41,71 @@
 		"enemy_hp":54,
 		"enemy_attack":18,
 		"enemy_defense":9,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait4.png",
-		"enemy_level":5
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Salamander.png",
+		"enemy_level":5,
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Mountain Cave.png"
 	},
 	{
 		"enemy_name":"Sandworm",
 		"enemy_hp":60,
 		"enemy_attack":20,
 		"enemy_defense":10,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait5.png",
-		"enemy_level":6
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Sandworm.png",
+		"enemy_level":6,
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Wasteland.png"
 	},
 	{
 		"enemy_name":"Skeleton Knight",
 		"enemy_hp":64,
 		"enemy_attack":24,
 		"enemy_defense":14,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait6.png",
-		"enemy_level":7
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Skeleton Knight.png",
+		"enemy_level":7,
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Dungeon.png"
 	},
 	{
 		"enemy_name":"Shaman Bird",
 		"enemy_hp":68,
 		"enemy_attack":28,
 		"enemy_defense":16,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait7.png",
-		"enemy_level":8
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Shaman Bird.png",
+		"enemy_level":8,
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Mountain.png"
 	},
 	{
 		"enemy_name":"Mummy",
 		"enemy_hp":72,
 		"enemy_attack":32,
 		"enemy_defense":20,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait8.png",
-		"enemy_level":9
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Mummy.png",
+		"enemy_level":9,
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Wasteland Cave.png"
 	},
 	{
 		"enemy_name":"Fishman",
 		"enemy_hp":75,
 		"enemy_attack":35,
 		"enemy_defense":22,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait9.png",
-		"enemy_level":10
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Fishman.png",
+		"enemy_level":10,
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Sea.png"
 	},
 	{
 		"enemy_name":"Demon Ninja",
 		"enemy_hp":80,
 		"enemy_attack":40,
 		"enemy_defense":25,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait10.png",
-		"enemy_level":11
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Demon Ninja.png",
+		"enemy_level":11,
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Final Dungeon.png"
 	},
 	{
 		"enemy_name":"Sphinx",
 		"enemy_hp":85,
 		"enemy_attack":44,
 		"enemy_defense":28,
-		"enemy_sprite":"res://Assets/Sprites/Portraits/Basic Enemies Portait11.png",
-		"enemy_level":12
+		"enemy_sprite":"res://Assets/Sprites/Portraits/Sphinx.png",
+		"enemy_level":12,
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Wasteland.png"
 	}
 ]

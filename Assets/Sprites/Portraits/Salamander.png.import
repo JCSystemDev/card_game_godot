@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btsg68u4npbi3"
-path="res://.godot/imported/Basic Enemies Portait11.png-28761cb8f9712a0adf785fe9125232f7.ctex"
+uid="uid://28js0u7fwnfm"
+path="res://.godot/imported/Salamander.png-e4d3d5cb51b310742f872e8f81104c4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait11.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait11.png-28761cb8f9712a0adf785fe9125232f7.ctex"]
+source_file="res://Assets/Sprites/Portraits/Salamander.png"
+dest_files=["res://.godot/imported/Salamander.png-e4d3d5cb51b310742f872e8f81104c4b.ctex"]
 
 [params]
 

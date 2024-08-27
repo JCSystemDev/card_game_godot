@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_t6yvp"]
 [ext_resource type="Shader" path="res://Shaders/slice_fade_out.gdshader" id="2_2nu01"]
-[ext_resource type="Texture2D" uid="uid://bmdbln42iycf4" path="res://Assets/Sprites/Portraits/Basic Enemies Portait1.png" id="2_bx33h"]
+[ext_resource type="Texture2D" uid="uid://bmdbln42iycf4" path="res://Assets/Sprites/Portraits/Haunted Tree.png" id="2_bx33h"]
 [ext_resource type="Shader" path="res://Shaders/flash.gdshader" id="2_uu31e"]
 [ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="3_8vp7f"]
 [ext_resource type="StyleBox" uid="uid://bjxsbha0couvb" path="res://Styles/Background Bar.tres" id="4_q7pg3"]

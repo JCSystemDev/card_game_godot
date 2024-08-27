@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg3v4x3s8b7e"
-path="res://.godot/imported/Basic Enemies Portait3.png-460d287c4f5158c78fe381aaa265dc84.ctex"
+uid="uid://c7x1dhitokuck"
+path="res://.godot/imported/Demon Ninja.png-cc596678b74b04d06d40b8a211041b87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait3.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait3.png-460d287c4f5158c78fe381aaa265dc84.ctex"]
+source_file="res://Assets/Sprites/Portraits/Demon Ninja.png"
+dest_files=["res://.godot/imported/Demon Ninja.png-cc596678b74b04d06d40b8a211041b87.ctex"]
 
 [params]
 

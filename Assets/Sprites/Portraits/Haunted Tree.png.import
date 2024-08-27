@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyw43sfuj55on"
-path="res://.godot/imported/Basic Enemies Portait7.png-b490966d7bfed9c56f05b03d184dee04.ctex"
+uid="uid://bmdbln42iycf4"
+path="res://.godot/imported/Haunted Tree.png-f53d4697875d8b7d427953bca32e252c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait7.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait7.png-b490966d7bfed9c56f05b03d184dee04.ctex"]
+source_file="res://Assets/Sprites/Portraits/Haunted Tree.png"
+dest_files=["res://.godot/imported/Haunted Tree.png-f53d4697875d8b7d427953bca32e252c.ctex"]
 
 [params]
 

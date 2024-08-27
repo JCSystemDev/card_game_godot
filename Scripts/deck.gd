@@ -8,7 +8,6 @@ var quantity_deck_cards: int
 var path: String
 
 func _ready():
-	var deck_name = game_zone.deck_name
 	for card in DataManager.deck_cards[0]["cards"]:
 		deck_cards.append(card)
 	deck_cards.shuffle()

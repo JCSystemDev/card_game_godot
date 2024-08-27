@@ -47,13 +47,13 @@ func apply_card_effect(_card: Card):
 		if _card.card_subtype == "+":
 			AudioManager.play_sound("Magic.wav")
 			game_zone.player.player_anim.play("player_magic")
-			if game_zone.player.current_hp + _card.number_effect > game_zone.player.player_hp:
-				game_zone.player.current_hp = game_zone.player.player_hp
+			if game_zone.player.current_hp + _card.number_effect > DataManager.player_stats[0]["player_hp"]:
+				game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
 				
 			else:
 				game_zone.player.current_hp += _card.number_effect
-			if game_zone.player.current_attack > game_zone.player.player_hp:
-				game_zone.player.current_hp = game_zone.player.player_hp
+			if game_zone.player.current_attack > DataManager.player_stats[0]["player_hp"]:
+				game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
 		else:
 			game_zone.player.current_hp -= _card.number_effect
 	elif _card.card_type == "Attack":

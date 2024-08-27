@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sjykqx1lpcfh"
-path="res://.godot/imported/Basic Enemies Portait6.png-09a5f4593066986e5fa48fb4813a25fa.ctex"
+uid="uid://dyw43sfuj55on"
+path="res://.godot/imported/Shaman Bird.png-7169fb8c8bc7ee9b76278bf1ddc5cfd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait6.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait6.png-09a5f4593066986e5fa48fb4813a25fa.ctex"]
+source_file="res://Assets/Sprites/Portraits/Shaman Bird.png"
+dest_files=["res://.godot/imported/Shaman Bird.png-7169fb8c8bc7ee9b76278bf1ddc5cfd5.ctex"]
 
 [params]
 

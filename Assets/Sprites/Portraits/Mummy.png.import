@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmdbln42iycf4"
-path="res://.godot/imported/Basic Enemies Portait1.png-9a18b0b9ddc64f98641e6e9ba1daa585.ctex"
+uid="uid://3syt11tqer"
+path="res://.godot/imported/Mummy.png-0b08cae16faa30a98dd39b501bccebcb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait1.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait1.png-9a18b0b9ddc64f98641e6e9ba1daa585.ctex"]
+source_file="res://Assets/Sprites/Portraits/Mummy.png"
+dest_files=["res://.godot/imported/Mummy.png-0b08cae16faa30a98dd39b501bccebcb.ctex"]
 
 [params]
 

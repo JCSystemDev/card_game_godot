@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7x1dhitokuck"
-path="res://.godot/imported/Basic Enemies Portait10.png-41892508f354c255fc87e3be795e20ee.ctex"
+uid="uid://bffka4pr1oakt"
+path="res://.godot/imported/Fishman.png-8a6330371ea3b5c9f71809a2096e3f8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait10.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait10.png-41892508f354c255fc87e3be795e20ee.ctex"]
+source_file="res://Assets/Sprites/Portraits/Fishman.png"
+dest_files=["res://.godot/imported/Fishman.png-8a6330371ea3b5c9f71809a2096e3f8e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3syt11tqer"
-path="res://.godot/imported/Basic Enemies Portait8.png-f364aab2502da0e74fc64b47fe25b7a1.ctex"
+uid="uid://byji51mx7jkoy"
+path="res://.godot/imported/Sandworm.png-6b1f295d32e11570d6cfba1644ccfa06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait8.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait8.png-f364aab2502da0e74fc64b47fe25b7a1.ctex"]
+source_file="res://Assets/Sprites/Portraits/Sandworm.png"
+dest_files=["res://.godot/imported/Sandworm.png-6b1f295d32e11570d6cfba1644ccfa06.ctex"]
 
 [params]
 

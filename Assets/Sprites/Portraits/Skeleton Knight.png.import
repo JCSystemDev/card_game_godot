@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://28js0u7fwnfm"
-path="res://.godot/imported/Basic Enemies Portait4.png-7eb6fa7be81916b43202a47926eabb69.ctex"
+uid="uid://sjykqx1lpcfh"
+path="res://.godot/imported/Skeleton Knight.png-598ecc0000a7699b77fc4603298b8818.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Portraits/Basic Enemies Portait4.png"
-dest_files=["res://.godot/imported/Basic Enemies Portait4.png-7eb6fa7be81916b43202a47926eabb69.ctex"]
+source_file="res://Assets/Sprites/Portraits/Skeleton Knight.png"
+dest_files=["res://.godot/imported/Skeleton Knight.png-598ecc0000a7699b77fc4603298b8818.ctex"]
 
 [params]
 

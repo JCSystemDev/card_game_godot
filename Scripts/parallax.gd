@@ -5,7 +5,7 @@ var speed: int = 250
 @onready var sprite_background : Sprite2D = $ParallaxBackground/ParallaxLayer/Sprite
 
 func _ready():
-	background_sprite = load(game_zone.background_name)
+	background_sprite = load(game_zone.enemy.enemy_background)
 	sprite_background.set_texture(background_sprite)
 
 func parallax_bg(delta_time) -> void:

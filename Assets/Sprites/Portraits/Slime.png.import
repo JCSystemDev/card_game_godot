@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfid5nmmc4na1"
-path="res://.godot/imported/Backgrounds7.png-8c626f4db52e194d63c1e349b21a854b.ctex"
+uid="uid://kr8vk66b6gy8"
+path="res://.godot/imported/Slime.png-2584da8e61647414b28cb64b8da4d812.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Backgrounds/Backgrounds7.png"
-dest_files=["res://.godot/imported/Backgrounds7.png-8c626f4db52e194d63c1e349b21a854b.ctex"]
+source_file="res://Assets/Sprites/Portraits/Slime.png"
+dest_files=["res://.godot/imported/Slime.png-2584da8e61647414b28cb64b8da4d812.ctex"]
 
 [params]
 

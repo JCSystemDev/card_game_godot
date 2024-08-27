@@ -58,7 +58,7 @@ func _on_button_pressed():
 			AudioManager.play_sound("Draw Phase.wav")
 		phase.pay:
 			phase_label.set_text(phases[1])
-			game_zone.player.current_gold += game_zone.player.player_gold
+			game_zone.player.current_gold += DataManager.player_stats[0]["player_gold"]
 			current_phase = phase.summon
 			AudioManager.play_sound("Pay Phase.wav")
 		phase.summon:
