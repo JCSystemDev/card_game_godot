@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://2ct4rccp4ni3"]
+[gd_scene load_steps=3 format=3 uid="uid://2ct4rccp4ni3"]
+
+[ext_resource type="Script" path="res://Scripts/enemy_character.gd" id="1_843g8"]
+[ext_resource type="SpriteFrames" uid="uid://b723dgiohsaoa" path="res://Animations/enemy_idle.tres" id="2_hio4d"]
 
 [node name="EnemyCharacter" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_843g8")
+enemy_name = "Slime"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_hio4d")
+animation = &"idle"

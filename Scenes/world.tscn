@@ -2,15 +2,35 @@
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_68tus"]
 [ext_resource type="TileSet" uid="uid://b5qmxcrflnvk6" path="res://TileSet/world.tres" id="1_tnn8u"]
-[ext_resource type="PackedScene" uid="uid://cs1nlk4gtmgvc" path="res://Scenes/player_character.tscn" id="3_c84qv"]
+[ext_resource type="PackedScene" uid="uid://2ct4rccp4ni3" path="res://Scenes/enemy_character.tscn" id="3_blner"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_68tus")
 
-[node name="Ground" type="TileMapLayer" parent="."]
+[node name="Tilemap" type="Node2D" parent="."]
+
+[node name="Ground" type="TileMapLayer" parent="Tilemap"]
 tile_set = ExtResource("1_tnn8u")
 
-[node name="Obstacles" type="TileMapLayer" parent="."]
+[node name="Obstacles" type="TileMapLayer" parent="Tilemap"]
+tile_set = ExtResource("1_tnn8u")
 
-[node name="Player" parent="." instance=ExtResource("3_c84qv")]
-position = Vector2(480, 270)
+[node name="Spawn Point" type="Marker2D" parent="."]
+position = Vector2(480, 480)
+gizmo_extents = 25.0
+
+[node name="EnemyCharacter" parent="." instance=ExtResource("3_blner")]
+position = Vector2(120, 100)
+enemy_name = "Slime"
+
+[node name="EnemyCharacter2" parent="." instance=ExtResource("3_blner")]
+position = Vector2(240, 100)
+enemy_name = "Gnome"
+
+[node name="EnemyCharacter3" parent="." instance=ExtResource("3_blner")]
+position = Vector2(360, 100)
+enemy_name = "Haunted Tree"
+
+[node name="EnemyCharacter4" parent="." instance=ExtResource("3_blner")]
+position = Vector2(480, 100)
+enemy_name = "Venom Frog"

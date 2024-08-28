@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bg3krrm8qu3am"
-path="res://.godot/imported/Basic Enemy7.png-110a967c90ad1467122155669a35977b.ctex"
+path="res://.godot/imported/Venom Frog 1.png-6a5023354d29364442f7873a4f21662e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Enemies/Basic Enemy7.png"
-dest_files=["res://.godot/imported/Basic Enemy7.png-110a967c90ad1467122155669a35977b.ctex"]
+source_file="res://Assets/Sprites/Enemies/Venom Frog 1.png"
+dest_files=["res://.godot/imported/Venom Frog 1.png-6a5023354d29364442f7873a4f21662e.ctex"]
 
 [params]
 

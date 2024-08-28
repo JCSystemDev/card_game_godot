@@ -62,7 +62,7 @@ func apply_card_effect(_card: Card):
 			game_zone.player.current_attack += _card.number_effect
 		else:
 			AudioManager.play_sound("Down Stats.wav")
-			game_zone.player.current_attack -= _card.number_effect
+			game_zone.enemy.current_attack -= _card.number_effect
 	elif _card.card_type == "Defense":
 		if _card.card_subtype == "+":
 			AudioManager.play_sound("Equip.wav")

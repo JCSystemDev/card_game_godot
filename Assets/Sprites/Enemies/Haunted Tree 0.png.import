@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl634hlnq8fse"
-path="res://.godot/imported/Basic Enemy1.png-8f1edf65f4eefc3e267b0825baeab397.ctex"
+uid="uid://bhsufyav7hom6"
+path="res://.godot/imported/Haunted Tree 0.png-2dc6909182edcd731ed2d92e9de5a8a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Enemies/Basic Enemy1.png"
-dest_files=["res://.godot/imported/Basic Enemy1.png-8f1edf65f4eefc3e267b0825baeab397.ctex"]
+source_file="res://Assets/Sprites/Enemies/Haunted Tree 0.png"
+dest_files=["res://.godot/imported/Haunted Tree 0.png-2dc6909182edcd731ed2d92e9de5a8a4.ctex"]
 
 [params]
 

@@ -16,26 +16,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.466667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 0]
-}
-
-[sub_resource type="Animation" id="Animation_vuo0g"]
-resource_name = "idle_up"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.466667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2i(4, 0), Vector2i(4, 0)]
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_2dtpc"]
@@ -48,10 +32,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.466667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [2, 2]
+"values": [2]
 }
 
 [sub_resource type="Animation" id="Animation_ob0hm"]
@@ -64,10 +48,26 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.466667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6, 6]
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_vuo0g"]
+resource_name = "idle_up"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(4, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_sd7k4"]
@@ -83,23 +83,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.266667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_t68r7"]
-resource_name = "walk_up"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.266667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [4, 5]
+"values": [1, 0]
 }
 
 [sub_resource type="Animation" id="Animation_8t6hq"]
@@ -115,7 +99,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.266667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [2, 3]
+"values": [3, 2]
 }
 
 [sub_resource type="Animation" id="Animation_rcicy"]
@@ -128,10 +112,26 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.266667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [7, 6]
+"values": [6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_t68r7"]
+resource_name = "walk_up"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5, 4]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bfyxn"]
@@ -147,7 +147,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
 script = ExtResource("1_t7mjj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -157,6 +157,7 @@ shape = SubResource("RectangleShape2D_77dt3")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7xecd")
 hframes = 8
+frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

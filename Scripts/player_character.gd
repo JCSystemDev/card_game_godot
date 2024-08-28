@@ -1,16 +1,33 @@
 class_name PlayerCharacter extends CharacterBody2D
 
-@export var move_speed: float = 200
-var cardinal_direction: Vector2 = Vector2.DOWN
-var direction: Vector2 = Vector2.ZERO
+var direction = Vector2()
+var move_speed: float = 5
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-func _ready():
-	pass
-
-func _process(delta):
-	direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
-	direction.y = Input.get_action_strength("down") - Input.get_action_strength("up")
-	velocity = direction * move_speed
-	
-func _physics_process(delta):
-	move_and_slide()
+func _physics_process(_delta):
+	if(Input.is_action_pressed("up") and direction.x == 0):
+		direction.y = -move_speed
+		animation_player.play("walk_up")
+	elif(Input.is_action_pressed("down") and direction.x == 0):
+		direction.y = move_speed
+		animation_player.play("walk_down")
+	elif(Input.is_action_pressed("left") and direction.y == 0):
+		direction.x = -move_speed
+		animation_player.play("walk_left")
+	elif(Input.is_action_pressed("right") and direction.y == 0):
+		direction.x = move_speed
+		animation_player.play("walk_right")
+	elif(Input.is_action_just_released("up")):
+		animation_player.play("idle_up")
+		direction = Vector2.ZERO	
+	elif(Input.is_action_just_released("down")):
+		animation_player.play("idle_down")
+		direction = Vector2.ZERO
+	elif(Input.is_action_just_released("left")):
+		animation_player.play("idle_left")
+		direction = Vector2.ZERO
+	elif(Input.is_action_just_released("right")):
+		animation_player.play("idle_right")
+		direction = Vector2.ZERO
+	move_and_collide(direction)
+		
