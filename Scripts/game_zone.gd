@@ -7,5 +7,5 @@ class_name GameZone extends Node2D
 @export var discard_pile: Discard_Pile
 @export var enemy: Enemy
 @export var notifications: Notifications
-var enemy_name: String = DataManager.enemies_list_low[randi() % DataManager.enemies_list_low.size()]
+var enemy_name: String = DataManager.enemy_summon
 var deck_name: String = "deck.json"

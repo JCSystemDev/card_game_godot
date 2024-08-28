@@ -1,13 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://dail5a5a8d0bt"]
+[gd_scene load_steps=15 format=3 uid="uid://dail5a5a8d0bt"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_jpr2x"]
 [ext_resource type="Texture2D" uid="uid://dydhk7j2xraxk" path="res://Assets/Sprites/Portraits/Player Portrait.png" id="2_ey72f"]
 [ext_resource type="StyleBox" uid="uid://bjxsbha0couvb" path="res://Styles/Background Bar.tres" id="2_m7qh3"]
 [ext_resource type="StyleBox" uid="uid://ivyegv5konhs" path="res://Styles/Fill Bar.tres" id="3_w6c1y"]
 [ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="4_yckr5"]
-[ext_resource type="Texture2D" uid="uid://ka5a7oorkc1j" path="res://Assets/Sprites/Icons/Icons341.png" id="5_2tyhe"]
-[ext_resource type="Texture2D" uid="uid://bndo838i1q6hb" path="res://Assets/Sprites/Icons/Icons290.png" id="6_t4g2i"]
-[ext_resource type="Texture2D" uid="uid://dwoni1n4e2q71" path="res://Assets/Sprites/Icons/Icons118.png" id="7_m111s"]
+[ext_resource type="Texture2D" uid="uid://ka5a7oorkc1j" path="res://Assets/Sprites/Icons/Sword.png" id="5_2tyhe"]
+[ext_resource type="Texture2D" uid="uid://bndo838i1q6hb" path="res://Assets/Sprites/Icons/Shield.png" id="6_t4g2i"]
+[ext_resource type="Texture2D" uid="uid://dwoni1n4e2q71" path="res://Assets/Sprites/Icons/Four Gold Coins.png" id="7_m111s"]
+[ext_resource type="Texture2D" uid="uid://cau37y3yd4x8f" path="res://Assets/Sprites/Templates/Portrait Player Marquee.png" id="9_csrkr"]
 
 [sub_resource type="Animation" id="Animation_4g26i"]
 length = 0.001
@@ -167,6 +168,11 @@ vertical_alignment = 1
 position = Vector2(36, 29)
 scale = Vector2(3, 3)
 texture = ExtResource("2_ey72f")
+
+[node name="Marquee" type="Sprite2D" parent="Stats Display"]
+position = Vector2(36, 29)
+scale = Vector2(3, 3)
+texture = ExtResource("9_csrkr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Stats Display"]
 root_node = NodePath("../..")

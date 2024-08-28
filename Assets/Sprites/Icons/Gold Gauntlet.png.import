@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://373xusfbumn7"
-path="res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"
+uid="uid://ccodr7xt11h34"
+path="res://.godot/imported/Gold Gauntlet.png-beb79d88a66abc23cf642338205382ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/Player.png"
-dest_files=["res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"]
+source_file="res://Assets/Sprites/Icons/Gold Gauntlet.png"
+dest_files=["res://.godot/imported/Gold Gauntlet.png-beb79d88a66abc23cf642338205382ab.ctex"]
 
 [params]
 

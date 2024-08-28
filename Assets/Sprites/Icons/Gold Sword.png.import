@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://373xusfbumn7"
-path="res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"
+uid="uid://db33o3jm34cvq"
+path="res://.godot/imported/Gold Sword.png-b6aa2929ef8f8ff207591b2f379e814d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/Player.png"
-dest_files=["res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"]
+source_file="res://Assets/Sprites/Icons/Gold Sword.png"
+dest_files=["res://.godot/imported/Gold Sword.png-b6aa2929ef8f8ff207591b2f379e814d.ctex"]
 
 [params]
 

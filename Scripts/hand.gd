@@ -7,7 +7,6 @@ class_name Hand extends Node2D
 @onready var card_scene: PackedScene = preload("res://Scenes/card.tscn")
 @onready var game_zone: GameZone = $".."
 
-
 var hand_cards: Array = []
 var touched_cards: Array = []
 var current_selected_card_index: int = -1
@@ -55,20 +54,26 @@ func apply_card_effect(_card: Card):
 			if game_zone.player.current_attack > DataManager.player_stats[0]["player_hp"]:
 				game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
 		else:
-			game_zone.player.current_hp -= _card.number_effect
+			game_zone.enemy.current_hp -= _card.number_effect
+			AudioManager.play_sound("Down Stats.wav")
 	elif _card.card_type == "Attack":
 		if _card.card_subtype == "+":
 			AudioManager.play_sound("Equip.wav")
 			game_zone.player.current_attack += _card.number_effect
 		else:
+			AudioManager.play_sound("Down Stats.wav")
 			game_zone.player.current_attack -= _card.number_effect
 	elif _card.card_type == "Defense":
 		if _card.card_subtype == "+":
 			AudioManager.play_sound("Equip.wav")
 			game_zone.player.current_defense += _card.number_effect
 		else:
-			game_zone.player.current_defense -= _card.number_effect
-			
+			AudioManager.play_sound("Down Stats.wav")
+			game_zone.enemy.current_defense -= _card.number_effect
+	elif _card.card_type == "Gold":
+		if _card.card_subtype == "+":
+			AudioManager.play_sound("Magic.wav")
+			game_zone.player.current_gold += _card.number_effect
 			
 func reposition_cards():
 	var card_spread = min(angle_limit / hand_cards.size(), max_cards_spread_angle)

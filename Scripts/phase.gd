@@ -60,10 +60,11 @@ func _on_button_pressed():
 			phase_label.set_text(phases[1])
 			game_zone.player.current_gold += DataManager.player_stats[0]["player_gold"]
 			current_phase = phase.summon
-			AudioManager.play_sound("Pay Phase.wav")
+			AudioManager.play_sound("Magic.wav")
 		phase.summon:
 			phase_label.set_text(phases[2])
 			current_phase = phase.attack
+			AudioManager.play_sound("Summon.wav")
 		phase.attack:
 			var attack_damage: int = 0
 			attack_damage = game_zone.player.current_attack - game_zone.enemy.current_defense

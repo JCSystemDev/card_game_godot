@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://373xusfbumn7"
-path="res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"
+uid="uid://dvy62ynroih26"
+path="res://.godot/imported/Gold Shield.png-8fcd352277425218a10f9eb103649ea3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/Player.png"
-dest_files=["res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"]
+source_file="res://Assets/Sprites/Icons/Gold Shield.png"
+dest_files=["res://.godot/imported/Gold Shield.png-8fcd352277425218a10f9eb103649ea3.ctex"]
 
 [params]
 

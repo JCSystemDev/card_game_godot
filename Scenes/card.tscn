@@ -4,9 +4,10 @@
 [ext_resource type="Script" path="res://Scripts/card.gd" id="1_q78fy"]
 [ext_resource type="Texture2D" uid="uid://c47gm488c7vjf" path="res://Assets/Sprites/Templates/Front BG.png" id="1_rgnd8"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="3_mhy7l"]
-[ext_resource type="Texture2D" uid="uid://blyup1pq5upvl" path="res://Assets/Sprites/Icons/Icons123.png" id="5_qmux8"]
+[ext_resource type="Texture2D" uid="uid://blyup1pq5upvl" path="res://Assets/Sprites/Icons/Gold Coins.png" id="5_qmux8"]
 [ext_resource type="Texture2D" uid="uid://bv6t5snecp0ln" path="res://Assets/Sprites/Templates/Description BG.png" id="6_6vvrd"]
 [ext_resource type="Texture2D" uid="uid://n4fd05a28si2" path="res://Assets/Sprites/Templates/Description Marquee.png" id="7_0njmf"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llc0d"]
 size = Vector2(96, 128)

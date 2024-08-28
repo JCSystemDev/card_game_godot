@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://373xusfbumn7"
-path="res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"
+uid="uid://dia113nwkile0"
+path="res://.godot/imported/Weakening.png-81e31e57570399add3c3f9d4a21b59f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/Player.png"
-dest_files=["res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"]
+source_file="res://Assets/Sprites/Icons/Weakening.png"
+dest_files=["res://.godot/imported/Weakening.png-81e31e57570399add3c3f9d4a21b59f2.ctex"]
 
 [params]
 

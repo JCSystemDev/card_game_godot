@@ -1,5 +1,5 @@
 extends Control
-@onready var game: PackedScene = load("res://Scenes/game_zone.tscn")
+@onready var game: PackedScene = load("res://Scenes/world.tscn")
 @onready var start_button: Button = $"Buttons/Start Game"
 
 func _ready():

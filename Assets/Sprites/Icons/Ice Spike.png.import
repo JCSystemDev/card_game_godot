@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://373xusfbumn7"
-path="res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"
+uid="uid://d2qqdpe31cw11"
+path="res://.godot/imported/Ice Spike.png-cb2351b3b5a5a2453a40c701455c0922.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/Player.png"
-dest_files=["res://.godot/imported/Player.png-db2acdf988f9d7b071ead854f4ace434.ctex"]
+source_file="res://Assets/Sprites/Icons/Ice Spike.png"
+dest_files=["res://.godot/imported/Ice Spike.png-cb2351b3b5a5a2453a40c701455c0922.ctex"]
 
 [params]
 
