@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://v2p8cn62if6f"]
+[gd_scene load_steps=8 format=3 uid="uid://v2p8cn62if6f"]
 
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="1_u23yk"]
 [ext_resource type="Shader" path="res://Shaders/squares_fader.gdshader" id="2_74xr4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3c6km"]
 shader = ExtResource("2_74xr4")
-shader_parameter/fade = 4
+shader_parameter/fade = 0
 shader_parameter/tiling = 1
 
 [sub_resource type="Animation" id="Animation_ffuw4"]
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_haxbt"]
@@ -51,16 +51,57 @@ tracks/1/keys = {
 "values": [true, true]
 }
 
+[sub_resource type="Animation" id="Animation_kawup"]
+resource_name = "transition 2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/fade")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oj7o0"]
 _data = {
 "RESET": SubResource("Animation_ffuw4"),
-"transition": SubResource("Animation_haxbt")
+"transition": SubResource("Animation_haxbt"),
+"transition 2": SubResource("Animation_kawup")
 }
 
 [node name="Transition" type="CanvasLayer"]
 script = ExtResource("1_u23yk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_3c6km")
 offset_right = 960.0
 offset_bottom = 540.0

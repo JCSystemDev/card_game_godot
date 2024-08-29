@@ -19,4 +19,5 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
 		DataManager.enemy_summon = enemy_name
 		DataManager.move_speed = 0
-		Transition.load_scene(game_zone)
+		Transition.load_scene(game_zone, "transition")
+		AudioManager.play_sound("Summon.wav")

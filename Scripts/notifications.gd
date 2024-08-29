@@ -7,10 +7,13 @@ class_name Notifications extends Node2D
 @onready var lose_buttons = $"Endgame Notification/Lose Buttons"
 
 func _on_exit_button_pressed():
-	Transition.load_scene(menu)
+	AudioManager.play_sound("Discard.wav")
+	Transition.load_scene(menu, "transition")
 
 func _on_retry_button_pressed():
-	Transition.reaload_scene()
+	AudioManager.play_sound("Equip.wav")
+	Transition.reaload_scene("transition")
 
 func _on_end_button_pressed():
-	Transition.load_scene(world)	
+	AudioManager.play_sound("Discard.wav")
+	Transition.load_scene(world, "transition")	

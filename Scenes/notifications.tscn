@@ -18,16 +18,16 @@ position = Vector2(160, 100)
 
 [node name="Background" type="Sprite2D" parent="Endgame Notification/BG"]
 modulate = Color(0.333407, 0, 0, 1)
-scale = Vector2(6, 4)
+scale = Vector2(12, 8)
 texture = ExtResource("2_xbr65")
 
 [node name="Marquee" type="Sprite2D" parent="Endgame Notification/BG"]
-scale = Vector2(6, 4)
+scale = Vector2(12, 8)
 texture = ExtResource("3_wtk74")
 
 [node name="Lose Buttons" type="Node2D" parent="Endgame Notification"]
 visible = false
-position = Vector2(-54, -44)
+position = Vector2(-54, -20)
 
 [node name="Retry Button" type="Button" parent="Endgame Notification/Lose Buttons"]
 offset_left = 2.0
@@ -49,7 +49,7 @@ text = "EXIT"
 
 [node name="Win Buttons" type="Node2D" parent="Endgame Notification"]
 visible = false
-position = Vector2(-160, -100)
+position = Vector2(-160, -76)
 
 [node name="End Button" type="Button" parent="Endgame Notification/Win Buttons"]
 offset_left = 89.0
@@ -62,9 +62,9 @@ text = "END BATTLE"
 
 [node name="Label" type="Label" parent="Endgame Notification"]
 offset_left = -104.0
-offset_top = -44.0
+offset_top = -96.0
 offset_right = 104.0
-offset_bottom = -21.0
+offset_bottom = -72.0
 theme_override_fonts/font = ExtResource("5_xh5vh")
 theme_override_font_sizes/font_size = 15
 text = "END GAME"
