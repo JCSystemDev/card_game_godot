@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/player_character.gd" id="1_t7mjj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77dt3"]
-size = Vector2(16, 16)
+size = Vector2(13.3333, 13.3333)
 
 [sub_resource type="Animation" id="Animation_amcv1"]
 resource_name = "idle_down"
@@ -146,18 +146,17 @@ _data = {
 "walk_up": SubResource("Animation_t68r7")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(3, 3)
+collision_mask = 2
 script = ExtResource("1_t7mjj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_77dt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7xecd")
 hframes = 8
-frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

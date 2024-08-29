@@ -8,6 +8,3 @@ func _ready():
 	var player_character = player_scene.instantiate()
 	add_child(player_character)
 	player_character.global_position = spawn_point.position
-
-func _process(_delta):
-	pass

@@ -12,7 +12,7 @@ func parallax_bg(delta_time) -> void:
 
 func _on_start_game_pressed():
 	Transition.load_scene(game)
-	
+
 
 func _process(delta):
 	parallax_bg(delta)

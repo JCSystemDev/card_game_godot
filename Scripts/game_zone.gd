@@ -1,5 +1,4 @@
 class_name GameZone extends Node2D
-
 @export var player: Player
 @export var deck: Deck
 @export var hand: Hand 

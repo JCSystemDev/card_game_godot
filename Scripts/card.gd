@@ -29,7 +29,6 @@ func _set_values(_card_name: String):
 			card_description = card["card_type"] + " " + card["card_subtype"] + str(card["number_effect"])
 			card_cost = card["card_cost"]
 			card_sprite = load(card["card_sprite"])
-	
 	cost_label.set_text(str(card_cost))
 	description_label.set_text(card_description)
 	name_label.set_text(card_name)

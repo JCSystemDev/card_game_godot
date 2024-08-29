@@ -25,10 +25,11 @@ texture = ExtResource("2_xbr65")
 scale = Vector2(6, 4)
 texture = ExtResource("3_wtk74")
 
-[node name="Buttons" type="Node2D" parent="Endgame Notification"]
+[node name="Lose Buttons" type="Node2D" parent="Endgame Notification"]
+visible = false
 position = Vector2(-54, -44)
 
-[node name="Retry Button" type="Button" parent="Endgame Notification/Buttons"]
+[node name="Retry Button" type="Button" parent="Endgame Notification/Lose Buttons"]
 offset_left = 2.0
 offset_top = 36.0
 offset_right = 100.0
@@ -37,7 +38,7 @@ theme = ExtResource("4_f1tme")
 theme_override_font_sizes/font_size = 10
 text = "RETRY"
 
-[node name="Exit Button" type="Button" parent="Endgame Notification/Buttons"]
+[node name="Exit Button" type="Button" parent="Endgame Notification/Lose Buttons"]
 offset_left = 2.0
 offset_top = 68.0
 offset_right = 100.0
@@ -45,6 +46,19 @@ offset_bottom = 92.0
 theme = ExtResource("4_f1tme")
 theme_override_font_sizes/font_size = 10
 text = "EXIT"
+
+[node name="Win Buttons" type="Node2D" parent="Endgame Notification"]
+visible = false
+position = Vector2(-160, -100)
+
+[node name="End Button" type="Button" parent="Endgame Notification/Win Buttons"]
+offset_left = 89.0
+offset_top = 104.0
+offset_right = 231.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("5_xh5vh")
+theme_override_font_sizes/font_size = 10
+text = "END BATTLE"
 
 [node name="Label" type="Label" parent="Endgame Notification"]
 offset_left = -104.0
@@ -57,5 +71,6 @@ text = "END GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Endgame Notification/Buttons/Retry Button" to="." method="_on_retry_button_pressed"]
-[connection signal="pressed" from="Endgame Notification/Buttons/Exit Button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Endgame Notification/Lose Buttons/Retry Button" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="Endgame Notification/Lose Buttons/Exit Button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Endgame Notification/Win Buttons/End Button" to="." method="_on_end_button_pressed"]

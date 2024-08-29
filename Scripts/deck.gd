@@ -13,10 +13,10 @@ func _ready():
 	deck_cards.shuffle()
 	quantity_deck_cards = len(deck_cards)
 	cards_in_deck.set_text("D: "+str(quantity_deck_cards))
-	
+
 func _process(_delta):
 	cards_in_deck.set_text("D: "+str(quantity_deck_cards))
-	
+
 func _draw_card():
 	var card: Card = card_scene.instantiate()
 	game_zone.hand.add_card(card)

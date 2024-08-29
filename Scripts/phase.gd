@@ -16,11 +16,6 @@ func _ready():
 	phase_label.set_text(phases[0])
 	current_phase = phase.pay
 	_states(state.ingame)
-	
-	
-func _process(_delta):
-	pass
-
 
 func _states(_state):
 	match _state:
@@ -29,6 +24,7 @@ func _states(_state):
 		state.win:
 			game_zone.notifications.endgame_label.set_text("YOU WIN")
 			game_zone.notifications.visible = true
+			game_zone.notifications.win_buttons.visible = true
 			game_zone.enemy.visible = false
 			phase_button.visible = false
 			game_zone.deck.visible = false
@@ -39,6 +35,7 @@ func _states(_state):
 		state.lose:
 			game_zone.notifications.endgame_label.set_text("YOU LOSE")
 			game_zone.notifications.visible = true
+			game_zone.notifications.lose_buttons.visible = true
 			game_zone.enemy.visible = false
 			phase_button.visible = false
 			game_zone.deck.visible = false
@@ -47,7 +44,6 @@ func _states(_state):
 			phase_label.visible = false
 			game_zone.player.player_anim.play("player_death")
 			AudioManager.play_music("Game Over.mp3")
-			
 
 func _on_button_pressed():
 	match current_phase:
@@ -84,8 +80,9 @@ func _on_button_pressed():
 			else:
 				game_zone.enemy.enemy_animation.play("death_enemy") 
 				await game_zone.enemy.enemy_animation.animation_finished
-				_states(state.win)
-				
+				current_state = state.win
+				_states(current_state)
+
 		phase.defense:
 			phase_label.set_text(phases[4])
 			current_phase = phase.draw
@@ -105,4 +102,3 @@ func _on_button_pressed():
 				game_zone.player.current_hp = 0
 				current_state = state.lose
 				_states(current_state)
-				
