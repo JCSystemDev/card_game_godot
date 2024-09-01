@@ -1,6 +1,7 @@
 extends Control
 @onready var game: PackedScene = load("res://Scenes/world.tscn")
 @onready var new_game: Button = $"Buttons/New Game"
+@onready var quit_game: Button = $"Buttons/Quit Game"
 
 func _ready():
 	Transition.animation_player.play_backwards("transition")

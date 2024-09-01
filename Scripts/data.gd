@@ -5,6 +5,7 @@ var cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/car
 var deck_cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/deck.json"))
 var enemies = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/enemies.json"))
 var player_stats = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/player_stats.json"))
+var dialogues = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/dialogues.json"))
 
 # Basic Enemies Categories (Low Power / Mid Power / High Power)
 var enemies_list_low: Array = []

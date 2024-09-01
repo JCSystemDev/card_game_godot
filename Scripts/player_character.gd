@@ -32,3 +32,8 @@ func _physics_process(_delta):
 		animation_player.play("idle_right")
 		direction = Vector2.ZERO
 	move_and_collide(direction)
+
+
+func _on_dialogue_detector_body_entered(body):
+	if body.is_in_group("enemy"):
+		pass
