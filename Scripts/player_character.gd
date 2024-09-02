@@ -32,5 +32,7 @@ func _physics_process(_delta):
 		elif(Input.is_action_just_released("right")):
 			animation_player.play("idle_right")
 			direction = Vector2.ZERO
+		else:
+			direction = Vector2.ZERO
 			
 	move_and_collide(direction)

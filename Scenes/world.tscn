@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://xg4d08tiinl8" path="res://Scenes/pause.tscn" id="4_wkknx"]
 
 [node name="World" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_68tus")
 
 [node name="Tilemap" type="Node2D" parent="."]
@@ -39,5 +40,6 @@ enemy_name = "Haunted Tree"
 position = Vector2(576, 240)
 enemy_name = "Venom Frog"
 
-[node name="Pause" parent="." instance=ExtResource("4_wkknx")]
-visible = false
+[node name="Pause Screen" parent="." instance=ExtResource("4_wkknx")]
+process_mode = 3
+visible = true

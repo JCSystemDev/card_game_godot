@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/player_character.gd" id="1_t7mjj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77dt3"]
-size = Vector2(16, 16)
+size = Vector2(15, 8)
 
 [sub_resource type="Animation" id="Animation_uow20"]
 length = 0.001
@@ -151,12 +151,13 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+process_mode = 1
 scale = Vector2(3, 3)
 collision_mask = 10
 script = ExtResource("1_t7mjj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.38419e-07, 2.38419e-07)
+position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_77dt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
