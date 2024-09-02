@@ -1,10 +1,10 @@
 extends Node2D
 
 # Data Base Access
+var player_stats_default = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/player_stats_default.json"))
 var cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/cards.json"))
 var deck_cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/deck.json"))
 var enemies = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/enemies.json"))
-var player_stats = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/player_stats.json"))
 var dialogues = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/dialogues.json"))
 
 # Basic Enemies Categories (Low Power / Mid Power / High Power)
@@ -17,6 +17,7 @@ var deck_list: Array = []
 
 # Player Variables
 var move_speed: float
+var player_stats
 
 # Enemy Varaibles
 var enemy_summon: String
@@ -38,11 +39,15 @@ func _get_deck():
 	for card in deck_cards[0]["cards"]:
 		deck_list.append(card)
 
+func _new_game():
+	player_stats = player_stats_default
+
 func _save_game():
-	var player_stats_save = JSON.stringify(player_stats)
-	var saved_file = FileAccess.open("res://Data Base/player_stats.json", FileAccess.WRITE)
-	saved_file.store_string(player_stats_save)
+	player_stats = JSON.stringify(player_stats)
+	var saved_file = FileAccess.open("res://Data Base/player_stats_saved.json", FileAccess.WRITE)
+	saved_file.store_string(player_stats)
 	saved_file.close()
 
 func _load_game():
-	var _player_stats = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/player_stats.json"))
+	var player_stats_load = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/player_stats_saved.json"))
+	player_stats = player_stats_load

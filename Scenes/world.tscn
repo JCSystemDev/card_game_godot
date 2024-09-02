@@ -40,6 +40,5 @@ enemy_name = "Haunted Tree"
 position = Vector2(576, 240)
 enemy_name = "Venom Frog"
 
-[node name="Pause Screen" parent="." instance=ExtResource("4_wkknx")]
-process_mode = 3
-visible = true
+[node name="Pause Screen" parent="." node_paths=PackedStringArray("world") instance=ExtResource("4_wkknx")]
+world = NodePath("..")

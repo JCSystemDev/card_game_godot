@@ -6,6 +6,7 @@ var current_attack: int
 var current_defense: int
 var sprite_texture: Texture2D
 var flash_texture: Texture2D
+var exp_points: int
 
 @onready var game_zone : GameZone = $".."
 @onready var name_enemy_label : Label = $"Enemy Name"
@@ -24,6 +25,7 @@ func _get_values(_enemy_name: String):
 			sprite_texture = load(enemy["enemy_sprite"])
 			flash_texture = load(enemy["enemy_sprite"])
 			enemy_background = enemy["enemy_background"]
+			exp_points = enemy["enemy_exp"]
 
 func _set_values():
 	name_enemy_label.set_text(game_zone.enemy_name)

@@ -18,14 +18,19 @@ func _input(event):
 
 
 func swap_pause_state():
+	AudioManager.play_sound("Discard.wav")
 	if not pause_screen.visible:
 		get_tree().paused = true
-		Transition.play_transition("transition 2")
-		Transition.play_backwards_transition("transition 2")
-		pause_screen.show()
+		Transition.play_transition("crossfade")
+		await get_tree().create_timer(0.5).timeout
+		pause_screen.visible = true
 		
 	elif pause_screen.visible:
-		Transition.play_transition("transition 2")
-		Transition.play_backwards_transition("transition 2")
-		pause_screen.hide()
 		get_tree().paused = false
+		Transition.play_transition("crossfade")
+		await get_tree().create_timer(0.5).timeout
+		pause_screen.visible = false
+		
+		
+		
+		

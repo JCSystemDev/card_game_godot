@@ -6,7 +6,8 @@
 		"enemy_defense":3,
 		"enemy_sprite":"res://Assets/Sprites/Portraits/Slime.png",
 		"enemy_level":1,
-		"enemy_background":"res://Assets/Sprites/Backgrounds/Meadow.png"
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Meadow.png",
+		"enemy_exp": 10
 	},
 	{
 		"enemy_name":"Gnome",
@@ -15,7 +16,8 @@
 		"enemy_defense":4,
 		"enemy_sprite":"res://Assets/Sprites/Portraits/Gnome.png",
 		"enemy_level":2,
-		"enemy_background":"res://Assets/Sprites/Backgrounds/Forest.png"
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Forest.png",
+		"enemy_exp": 20
 	},
 	{
 		"enemy_name":"Haunted Tree",
@@ -24,7 +26,8 @@
 		"enemy_defense":5,
 		"enemy_sprite":"res://Assets/Sprites/Portraits/Haunted Tree.png",
 		"enemy_level":3,
-		"enemy_background":"res://Assets/Sprites/Backgrounds/Desert Forest.png"
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Desert Forest.png",
+		"enemy_exp": 30
 	},
 	{
 		"enemy_name":"Venom Frog",
@@ -33,7 +36,8 @@
 		"enemy_defense":8,
 		"enemy_sprite":"res://Assets/Sprites/Portraits/Venom Frog.png",
 		"enemy_level":4,
-		"enemy_background":"res://Assets/Sprites/Backgrounds/Cave.png"
+		"enemy_background":"res://Assets/Sprites/Backgrounds/Cave.png",
+		"enemy_exp": 40
 		
 	},
 	{

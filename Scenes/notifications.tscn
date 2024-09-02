@@ -1,10 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://0eq60ymgekep"]
+[gd_scene load_steps=9 format=3 uid="uid://0eq60ymgekep"]
 
 [ext_resource type="Script" path="res://Scripts/notifications.gd" id="1_nx5iy"]
 [ext_resource type="Texture2D" uid="uid://b61mv2e41bsd2" path="res://Assets/Sprites/Templates/Buttons BG.png" id="2_xbr65"]
 [ext_resource type="Texture2D" uid="uid://bs5q6wkkxss60" path="res://Assets/Sprites/Templates/Buttons Marquee.png" id="3_wtk74"]
 [ext_resource type="Theme" uid="uid://whtf1cxg48ud" path="res://Styles/button.tres" id="4_f1tme"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="5_xh5vh"]
+
+[sub_resource type="Animation" id="Animation_wpq26"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_7enfa"]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Endgame Notification:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2labr"]
+_data = {
+"RESET": SubResource("Animation_wpq26"),
+"show": SubResource("Animation_7enfa")
+}
 
 [node name="Notifications" type="Node2D"]
 visible = false
@@ -53,23 +78,39 @@ position = Vector2(-160, -76)
 
 [node name="End Button" type="Button" parent="Endgame Notification/Win Buttons"]
 offset_left = 81.0
-offset_top = 49.0
+offset_top = 86.0
 offset_right = 235.0
-offset_bottom = 73.0
+offset_bottom = 113.0
 theme_override_fonts/font = ExtResource("5_xh5vh")
 theme_override_font_sizes/font_size = 10
 text = "TO WORLD"
 
+[node name="Exp" type="Label" parent="Endgame Notification/Win Buttons"]
+offset_left = -43.0
+offset_top = 23.0
+offset_right = 362.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("5_xh5vh")
+theme_override_font_sizes/font_size = 15
+text = "YOU GOT 100 EXP POINTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Label" type="Label" parent="Endgame Notification"]
 offset_left = -104.0
-offset_top = -96.0
+offset_top = -98.0
 offset_right = 104.0
-offset_bottom = -72.0
+offset_bottom = -74.0
 theme_override_fonts/font = ExtResource("5_xh5vh")
 theme_override_font_sizes/font_size = 15
 text = "END GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2labr")
+}
 
 [connection signal="pressed" from="Endgame Notification/Lose Buttons/Retry Button" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="Endgame Notification/Lose Buttons/Exit Button" to="." method="_on_exit_button_pressed"]
