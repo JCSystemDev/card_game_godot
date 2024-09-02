@@ -44,10 +44,10 @@ func _new_game():
 
 func _save_game():
 	player_stats = JSON.stringify(player_stats)
-	var saved_file = FileAccess.open("res://Data Base/player_stats_saved.json", FileAccess.WRITE)
+	var saved_file = FileAccess.open("user://player_stats_saved.json", FileAccess.WRITE)
 	saved_file.store_string(player_stats)
 	saved_file.close()
 
 func _load_game():
-	var player_stats_load = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/player_stats_saved.json"))
+	var player_stats_load = JSON.parse_string(FileAccess.get_file_as_string("user://player_stats_saved.json"))
 	player_stats = player_stats_load
