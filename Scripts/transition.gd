@@ -22,6 +22,15 @@ func reaload_scene(transition: String):
 	await animation_player.animation_finished
 	color_rect.visible = false
 	
+func play_transition(transition: String):
+	animation_player.play(transition)
+	await animation_player.animation_finished
+	
+func play_backwards_transition(transition: String):
+	animation_player.play_backwards(transition)
+	await animation_player.animation_finished
+	color_rect.visible = false
+
 func quit_transition(transition: String):
 	animation_player.play(transition)
 	await animation_player.animation_finished

@@ -1,7 +1,7 @@
 [
 	{
-		"player_name": "Player",
-		"player_lv": 1,
+		"player_name": "JC SYSTEM",
+		"player_level": 1,
 		"player_hp" : 20,
 		"player_attack" : 10,
 		"player_defense" : 5,

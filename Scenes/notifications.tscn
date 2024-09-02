@@ -27,38 +27,38 @@ texture = ExtResource("3_wtk74")
 
 [node name="Lose Buttons" type="Node2D" parent="Endgame Notification"]
 visible = false
-position = Vector2(-54, -20)
+position = Vector2(-54, -67)
 
 [node name="Retry Button" type="Button" parent="Endgame Notification/Lose Buttons"]
-offset_left = 2.0
-offset_top = 36.0
-offset_right = 100.0
-offset_bottom = 60.0
+offset_left = -25.0
+offset_top = 9.0
+offset_right = 129.0
+offset_bottom = 35.0
 theme = ExtResource("4_f1tme")
 theme_override_font_sizes/font_size = 10
 text = "RETRY"
 
 [node name="Exit Button" type="Button" parent="Endgame Notification/Lose Buttons"]
-offset_left = 2.0
-offset_top = 68.0
-offset_right = 100.0
-offset_bottom = 92.0
+offset_left = -25.0
+offset_top = 40.0
+offset_right = 129.0
+offset_bottom = 64.0
 theme = ExtResource("4_f1tme")
 theme_override_font_sizes/font_size = 10
-text = "EXIT"
+text = "TO WORLD"
 
 [node name="Win Buttons" type="Node2D" parent="Endgame Notification"]
 visible = false
 position = Vector2(-160, -76)
 
 [node name="End Button" type="Button" parent="Endgame Notification/Win Buttons"]
-offset_left = 89.0
-offset_top = 104.0
-offset_right = 231.0
-offset_bottom = 128.0
+offset_left = 81.0
+offset_top = 49.0
+offset_right = 235.0
+offset_bottom = 73.0
 theme_override_fonts/font = ExtResource("5_xh5vh")
 theme_override_font_sizes/font_size = 10
-text = "END BATTLE"
+text = "TO WORLD"
 
 [node name="Label" type="Label" parent="Endgame Notification"]
 offset_left = -104.0

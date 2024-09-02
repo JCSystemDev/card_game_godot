@@ -7,6 +7,7 @@
 [node name="Interaction Area" type="Area2D"]
 collision_layer = 0
 script = ExtResource("1_46rbe")
+action_name = "TALK"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_u6iri")

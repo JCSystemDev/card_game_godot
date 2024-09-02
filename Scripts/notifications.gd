@@ -8,7 +8,7 @@ class_name Notifications extends Node2D
 
 func _on_exit_button_pressed():
 	AudioManager.play_sound("Discard.wav")
-	Transition.load_scene(menu, "transition")
+	Transition.load_scene(world, "transition")
 
 func _on_retry_button_pressed():
 	AudioManager.play_sound("Equip.wav")

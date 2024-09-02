@@ -3,7 +3,6 @@ class_name Interaction
 
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var interaction_label = $Label
-const base_text = "[ENTER]"
 var active_areas: Array = []
 var can_interact: bool = true
 
@@ -35,6 +34,6 @@ func _input(event):
 	if event.is_action_pressed("ui_accept") && can_interact:
 		if active_areas.size() > 0:
 			can_interact = false
-			interaction_label.visible = false
+			interaction_label.hide()
 			await active_areas[0].interact.call()
 			can_interact = true

@@ -17,10 +17,13 @@ func _process(delta):
 func _on_quit_game_pressed():
 	AudioManager.play_sound("Discard.wav")
 	Transition.quit_transition("transition")
+	quit_game.set_disabled(true)
+	
 
 func _on_new_game_pressed():
 	AudioManager.play_sound("Equip.wav")
 	Transition.load_scene(game, "transition")
+	new_game.set_disabled(true)
 
 func _on_continue_game_pressed():
 	pass # Replace with function body.

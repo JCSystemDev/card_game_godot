@@ -11,11 +11,15 @@ var dialogues = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base
 var enemies_list_low: Array = []
 var enemies_list_mid: Array = []
 var enemies_list_high: Array = []
-var deck_list: Array = []
-var enemy_summon: String
 
-# Player Stats
+# Deck
+var deck_list: Array = []
+
+# Player Variables
 var move_speed: float
+
+# Enemy Varaibles
+var enemy_summon: String
 
 func _ready():
 	_get_enemies()

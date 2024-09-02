@@ -31,13 +31,5 @@ func _ready():
 			enemy_texture = load(enemy["enemy_sprite"])
 
 func _on_interact():
-	if DialogueManager.line_state == DialogueManager.line.start:
-		DialogueManager._load_dialogue_box(dialogue_start, enemy_texture ,enemy_name)
-	elif DialogueManager.line_state == DialogueManager.line.challenge:
-		DialogueManager._load_dialogue_box(dialogue_challenge, enemy_texture, enemy_name)
-	elif DialogueManager.line_state == DialogueManager.line.negative:
-		DialogueManager._load_dialogue_box(dialogue_negative, enemy_texture, enemy_name)
-	if DialogueManager.battle:
-		DataManager.enemy_summon = enemy_name
-		Transition.load_scene(game_zone, "transition")
-		AudioManager.play_sound("Summon.wav")
+	DialogueManager._load_dialogue_box(dialogue_challenge, enemy_texture ,enemy_name)
+	DialogueManager._play_dialogue_box()

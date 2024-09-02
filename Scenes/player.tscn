@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dail5a5a8d0bt"]
+[gd_scene load_steps=16 format=3 uid="uid://dail5a5a8d0bt"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_jpr2x"]
 [ext_resource type="Texture2D" uid="uid://dydhk7j2xraxk" path="res://Assets/Sprites/Portraits/Player Portrait.png" id="2_ey72f"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bndo838i1q6hb" path="res://Assets/Sprites/Icons/Shield.png" id="6_t4g2i"]
 [ext_resource type="Texture2D" uid="uid://dwoni1n4e2q71" path="res://Assets/Sprites/Icons/Four Gold Coins.png" id="7_m111s"]
 [ext_resource type="Texture2D" uid="uid://cau37y3yd4x8f" path="res://Assets/Sprites/Templates/Portrait Player Marquee.png" id="9_csrkr"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="10_of6vc"]
 
 [sub_resource type="Animation" id="Animation_4g26i"]
 length = 0.001
@@ -74,10 +75,9 @@ _data = {
 script = ExtResource("1_jpr2x")
 
 [node name="Stats Display" type="Node2D" parent="."]
-position = Vector2(0, -4)
 
 [node name="HP" type="Node2D" parent="Stats Display"]
-position = Vector2(35, 26)
+position = Vector2(35, 34)
 
 [node name="Health Bar" type="Node2D" parent="Stats Display/HP"]
 position = Vector2(0, 20)
@@ -165,12 +165,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Portrait" type="Sprite2D" parent="Stats Display"]
-position = Vector2(36, 29)
+position = Vector2(36, 33)
 scale = Vector2(3, 3)
 texture = ExtResource("2_ey72f")
 
 [node name="Marquee" type="Sprite2D" parent="Stats Display"]
-position = Vector2(36, 29)
+position = Vector2(36, 33)
 scale = Vector2(3, 3)
 texture = ExtResource("9_csrkr")
 
@@ -179,3 +179,14 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_5op0l")
 }
+
+[node name="Name" type="Label" parent="Stats Display"]
+offset_left = -43.0
+offset_top = -76.0
+offset_right = 119.0
+offset_bottom = -60.0
+theme_override_fonts/font = ExtResource("10_of6vc")
+theme_override_font_sizes/font_size = 10
+text = "JC SYSTEM"
+horizontal_alignment = 1
+vertical_alignment = 1
