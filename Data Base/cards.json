@@ -2,7 +2,8 @@
    {
 	  "card_name":"Gold Sword",  
 	  "card_type":"Attack",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect":3,
 	  "card_cost":3,
 	  "card_sprite":"res://Assets/Sprites/Icons/Gold Sword.png"
@@ -10,7 +11,8 @@
    {
 	  "card_name":"Cure",  
 	  "card_type":"HP",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect":10,
 	  "card_cost":5,
 	  "card_sprite":"res://Assets/Sprites/Icons/Cure.png"
@@ -18,7 +20,8 @@
    {
 	  "card_name":"Blood Helmet",  
 	  "card_type":"Defense",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",		
 	  "number_effect":2,
 	  "card_cost":2,
 	  "card_sprite":"res://Assets/Sprites/Icons/Blood Helmet.png"
@@ -26,7 +29,8 @@
    {
 	  "card_name":"Gold Shield",  
 	  "card_type":"Defense",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect":3,
 	  "card_cost":3,
 	  "card_sprite":"res://Assets/Sprites/Icons/Gold Shield.png"
@@ -34,7 +38,8 @@
    {
 	  "card_name":"Three Gold Coins",  
 	  "card_type":"Gold",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect":3,
 	  "card_cost":0,
 	  "card_sprite":"res://Assets/Sprites/Icons/Three Gold Coins.png"
@@ -42,7 +47,8 @@
    {
 	  "card_name":"Gold Coin",  
 	  "card_type":"Gold",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect":1,
 	  "card_cost":0,
 	  "card_sprite":"res://Assets/Sprites/Icons/Gold Coin.png"
@@ -51,6 +57,7 @@
 	  "card_name":"Cure Potion",  
 	  "card_type":"HP",
 	  "card_subtype":"+",	
+	  "card_target": "Player",
 	  "number_effect":5,
 	  "card_cost":3,
 	  "card_sprite":"res://Assets/Sprites/Icons/Cure Potion.png"	
@@ -58,7 +65,8 @@
 	{
 	  "card_name":"Venom Potion",  
 	  "card_type":"HP",
-	  "card_subtype":"-",	
+	  "card_subtype":"-",
+	  "card_target": "Enemy",	
 	  "number_effect":5,
 	  "card_cost":3,
 	  "card_sprite":"res://Assets/Sprites/Icons/Venom Potion.png"	
@@ -66,7 +74,8 @@
 	{
 	  "card_name":"Gold Gauntlet",  
 	  "card_type":"Hand",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect": 1,
 	  "card_cost":5,
 	  "card_sprite":"res://Assets/Sprites/Icons/Gold Gauntlet.png"
@@ -74,7 +83,8 @@
 	{
 	  "card_name":"Gold Dagger",  
 	  "card_type":"Attack",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect":2,
 	  "card_cost":2,
 	  "card_sprite":"res://Assets/Sprites/Icons/Gold Dagger.png"
@@ -83,6 +93,7 @@
 	  "card_name":"Ice Spike",  
 	  "card_type":"HP",
 	  "card_subtype":"-",	
+	  "card_target": "Enemy",
 	  "number_effect":10,
 	  "card_cost":5,
 	  "card_sprite":"res://Assets/Sprites/Icons/Ice Spike.png"	
@@ -90,7 +101,8 @@
 	{
 	  "card_name":"Fireball",  
 	  "card_type":"HP",
-	  "card_subtype":"-",	
+	  "card_subtype":"-",
+	  "card_target": "Enemy",	
 	  "number_effect":10,
 	  "card_cost":5,
 	  "card_sprite":"res://Assets/Sprites/Icons/Fireball.png"	
@@ -98,7 +110,8 @@
 	{
 	  "card_name":"Weakening",  
 	  "card_type":"Attack",
-	  "card_subtype":"-",	
+	  "card_subtype":"-",
+	  "card_target": "Enemy",	
 	  "number_effect":4,
 	  "card_cost":3,
 	  "card_sprite":"res://Assets/Sprites/Icons/Weakening.png"	
@@ -107,6 +120,7 @@
 	  "card_name":"Unshield",  
 	  "card_type":"Defense",
 	  "card_subtype":"-",	
+	  "card_target": "Enemy",
 	  "number_effect":4,
 	  "card_cost":3,
 	  "card_sprite":"res://Assets/Sprites/Icons/Unshield.png"	
@@ -114,7 +128,8 @@
 	{
 	  "card_name":"Blood Shield",  
 	  "card_type":"Defense",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect":5,
 	  "card_cost":5,
 	  "card_sprite":"res://Assets/Sprites/Icons/Blood Shield.png"	
@@ -122,7 +137,8 @@
 	{
 	  "card_name":"Two Gold Coins",  
 	  "card_type":"Gold",
-	  "card_subtype":"+",	
+	  "card_subtype":"+",
+	  "card_target": "Player",	
 	  "number_effect":2,
 	  "card_cost":0,
 	  "card_sprite":"res://Assets/Sprites/Icons/Two Gold Coins.png"	

@@ -1,7 +1,6 @@
 extends Node2D
 
 # Data Base Access
-var player_stats_default = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/player_stats_default.json"))
 var cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/cards.json"))
 var deck_cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/deck.json"))
 var enemies = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/enemies.json"))
@@ -18,22 +17,21 @@ var deck_list: Array = []
 # Player Variables
 var move_speed: float
 var player_stats
+var player_stats_default = [{
+	
+	"player_name": "BENJAMIN",
+	"player_level": 1,
+	"player_hp" : 20,
+	"player_attack" : 10,
+	"player_defense" : 5,
+	"player_gold" : 5,
+	"player_exp" : 0}]
 
 # Enemy Varaibles
 var enemy_summon: String
 
 func _ready():
-	_get_enemies()
 	_get_deck()
-
-func _get_enemies():
-	for enemy in enemies:
-		if enemy["enemy_level"] <= 4:
-			enemies_list_low.append(enemy["enemy_name"])
-		elif enemy["enemy_level"] <= 8:
-			enemies_list_mid.append(enemy["enemy_name"])
-		elif enemy["enemy_level"] <= 12:
-			enemies_list_high.append(enemy["enemy_name"])
 
 func _get_deck():
 	for card in deck_cards[0]["cards"]:

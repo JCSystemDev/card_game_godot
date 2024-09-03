@@ -1,11 +1,3 @@
 [
-	{
-		"player_name": "BENJAMIN",
-		"player_level": 1,
-		"player_hp" : 20,
-		"player_attack" : 10,
-		"player_defense" : 5,
-		"player_gold" : 5,
-		"player_exp" : 0
-	}
+
 ]

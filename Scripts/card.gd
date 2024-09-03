@@ -7,8 +7,8 @@ var card_description: String
 var card_cost: int
 var card_sprite: Texture2D
 var card_type: String
-var card_subtype: String
 var number_effect: int
+var card_target: String
 
 @onready var cost_label: Label = $"Cost Display/Cost"
 @onready var description_label: Label = $"Description Display/Description"
@@ -17,18 +17,21 @@ var number_effect: int
 @onready var bg_sprite: Sprite2D = $"Front BG"
 
 func _ready():
-	_set_values(card_name)
+	_get_values(card_name)
+	_set_values()
 	visible = false
 	
-func _set_values(_card_name: String):
+func _get_values(_card_name: String):
 	for card in DataManager.cards:
 		if card["card_name"] == card_name:
 			card_type = card["card_type"]
-			card_subtype = card["card_subtype"]
+			card_target = card["card_target"]
 			number_effect = card["number_effect"]
 			card_description = card["card_type"] + " " + card["card_subtype"] + str(card["number_effect"])
 			card_cost = card["card_cost"]
 			card_sprite = load(card["card_sprite"])
+
+func _set_values():
 	cost_label.set_text(str(card_cost))
 	description_label.set_text(card_description)
 	name_label.set_text(card_name)

@@ -1,26 +1,18 @@
 [
 	{
 		"enemy_name": "Slime",
-		"dialogue_start": "I'm Slime, the squishy guardian of these lands. Don't let my simple form fool you.",
-		"dialogue_challenge": "Are you ready to get stuck?",
-		"dialogue_negative": "Maybe you're just not ready to get your hands dirty. I'll be here, waiting."
+		"dialogue_challenge": "Are you ready to get stuck?"
 	},
 	{
 		"enemy_name": "Gnome",
-		"dialogue_start": "Greetings, traveler! I'm Gnome, the keeper of secrets hidden in the earth.",
-		"dialogue_challenge": "Dare to challenge my ancient wisdom?",
-		"dialogue_negative": "Ah, a wise choice to avoid this battle. But remember, not all challenges can be dodged forever."
+		"dialogue_challenge": "Dare to challenge my ancient wisdom?"
 	},
 	{
 		"enemy_name": "Haunted Tree",
-		"dialogue_start": "I am the Haunted Tree, cursed by the spirits of the forest. My roots run deep in darkness.",
-		"dialogue_challenge": "Will you brave the terror I bring?",
-		"dialogue_negative": "You fear the darkness within me, I see. But beware, running from your fears only makes them stronger."
+		"dialogue_challenge": "Will you brave the terror I bring?"
 	},
 	{
 		"enemy_name": "Venom Frog",
-		"dialogue_start": "I'm Venom Frog, a creature born from the darkest swamps.",
-		"dialogue_challenge": "My poison is deadly, but is your courage stronger?",
-		"dialogue_negative": "Backing out already? Maybe you're just not ready to get your hands dirty. I'll be here, waiting."
+		"dialogue_challenge": "My poison is deadly, but is your courage stronger?"
 	}
 ]

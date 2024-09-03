@@ -21,10 +21,8 @@ func _ready():
 	animated_sprite.sprite_frames = sprite_frames
 	animated_sprite.play(animation_name)
 	for enemy_dialogues in DataManager.dialogues:
-		if enemy_name == enemy_dialogues["enemy_name"]:
-			dialogue_start = enemy_dialogues["dialogue_start"]  
+		if enemy_name == enemy_dialogues["enemy_name"]: 
 			dialogue_challenge = enemy_dialogues["dialogue_challenge"]
-			dialogue_negative = enemy_dialogues["dialogue_negative"]
 	
 	for enemy in DataManager.enemies:
 		if enemy_name == enemy["enemy_name"]:

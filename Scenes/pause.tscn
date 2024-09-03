@@ -54,10 +54,10 @@ script = ExtResource("1_tussv")
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
-color = Color(0.144091, 6.69318e-08, 1.50409e-08, 1)
+color = Color(0.0784314, 0, 0.196078, 1)
 
 [node name="Player" type="Node2D" parent="."]
-position = Vector2(204, 140)
+position = Vector2(312, 140)
 
 [node name="Player Portrait" type="Sprite2D" parent="Player"]
 scale = Vector2(4, 4)
@@ -119,53 +119,53 @@ vertical_alignment = 1
 
 [node name="Exp" type="Label" parent="Player"]
 offset_left = 108.0
-offset_top = 48.0
+offset_top = 46.0
 offset_right = 279.0
-offset_bottom = 80.0
+offset_bottom = 78.0
 theme_override_fonts/font = ExtResource("4_kc4od")
 theme_override_font_sizes/font_size = 15
 text = "EXP 100"
 vertical_alignment = 1
 
 [node name="Buttons" type="Node2D" parent="."]
-position = Vector2(104, 230)
+position = Vector2(250, 229)
 
 [node name="Options Button" type="Button" parent="Buttons"]
-offset_left = 43.0
+offset_left = 120.0
 offset_top = 92.0
-offset_right = 349.0
+offset_right = 348.0
 offset_bottom = 132.0
 theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "OPTIONS
 "
 
 [node name="Resume Button" type="Button" parent="Buttons"]
-offset_left = 43.0
+offset_left = 120.0
 offset_top = 42.0
-offset_right = 349.0
+offset_right = 348.0
 offset_bottom = 82.0
 theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "RESUME
 "
 
 [node name="Save Button" type="Button" parent="Buttons"]
-offset_left = 42.0
+offset_left = 120.0
 offset_top = 140.0
 offset_right = 348.0
 offset_bottom = 180.0
 theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "SAVE GAME"
 
 [node name="Exit Button" type="Button" parent="Buttons"]
-offset_left = 42.0
+offset_left = 120.0
 offset_top = 188.0
 offset_right = 348.0
 offset_bottom = 228.0
 theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "MAIN MENU"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -174,8 +174,8 @@ libraries = {
 }
 
 [node name="Text Box" type="Node2D" parent="."]
-visible = false
 position = Vector2(521, 140)
+scale = Vector2(1e-05, 1)
 
 [node name="Background" type="Sprite2D" parent="Text Box"]
 modulate = Color(0.117647, 0, 0.235294, 1)

@@ -1,5 +1,4 @@
 extends CanvasLayer
-
 @onready var avatar_sprite: Sprite2D = $"Character Avatar/Avatar"
 @onready var avatar_name: Label = $"Character Avatar/Name"
 @onready var avatar_dialogue: Label = $Dialogue
@@ -8,9 +7,6 @@ extends CanvasLayer
 @onready var yes_button: Button = $"Yes Button"
 @onready var no_button: Button = $"No Button"
 var game_zone: PackedScene = load("res://Scenes/game_zone.tscn")
-
-var line_state
-enum line{start, challenge, negative}
 
 func _ready():
 	dialogue_box.visible = false

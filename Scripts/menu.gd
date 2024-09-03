@@ -1,5 +1,5 @@
 extends Control
-var saved_file = JSON.parse_string(FileAccess.get_file_as_string("user://player_stats_saved.json"))
+
 @onready var game: PackedScene = load("res://Scenes/world.tscn")
 @onready var new_game: Button = $"Buttons/New Game"
 @onready var load_game: Button = $"Buttons/Continue Game"
@@ -9,7 +9,6 @@ func _ready():
 	Transition.animation_player.play_backwards("transition")
 	AudioManager.play_music("Main Menu.mp3")
 	new_game.grab_focus()
-	
 	
 func parallax_bg(delta_time) -> void:
 	get_node("ParallaxBackground").scroll_base_offset -= Vector2(1, 0) * 100 * delta_time	

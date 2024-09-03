@@ -30,6 +30,7 @@ AudioManager="*res://Scenes/audio.tscn"
 DataManager="*res://Scripts/data.gd"
 DialogueManager="*res://Scenes/dialogue.tscn"
 InteractionManager="*res://Scenes/interaction.tscn"
+TweenManager="*res://Scripts/tweens.gd"
 
 [display]
 

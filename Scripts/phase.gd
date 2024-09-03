@@ -37,8 +37,6 @@ func _states(_state):
 			phase_label.visible = false
 			AudioManager.play_music("Victory Fanfare.mp3")
 			
-			
-			
 		state.lose:
 			game_zone.notifications.animation_player.play("show")
 			game_zone.notifications.endgame_label.set_text("YOU LOSE")
@@ -79,12 +77,9 @@ func _on_button_pressed():
 			current_phase = phase.defense
 			AudioManager.play_sound("Attack Phase.wav")
 			if game_zone.enemy.current_hp > 0:
-				var shake = create_tween()
 				game_zone.enemy.enemy_animation.play("damage_enemy")
-				for times in 5:
-					shake.tween_property(game_zone.enemy,"position", Vector2(game_zone.enemy.position.x + 5,game_zone.enemy.position.y),0.025)
-					shake.tween_property(game_zone.enemy,"position", Vector2(game_zone.enemy.position.x - 5,game_zone.enemy.position.y),0.025)
-				shake.tween_property(game_zone.enemy,"position", Vector2(game_zone.enemy.position.x,game_zone.enemy.position.y),0.025)
+				TweenManager._shake_tween(game_zone.enemy)
+				
 			else:
 				game_zone.enemy.enemy_animation.play("death_enemy") 
 				await game_zone.enemy.enemy_animation.animation_finished
@@ -98,11 +93,7 @@ func _on_button_pressed():
 			defense_damage = game_zone.enemy.current_attack - game_zone.player.current_defense
 			if defense_damage < 0:
 				defense_damage = 0
-			var shake = create_tween()
-			for times in 5:
-				shake.tween_property(game_zone.player.stats_display, "position", Vector2(5, game_zone.player.stats_display.position.y), 0.025)
-				shake.tween_property(game_zone.player.stats_display, "position", Vector2(-5, game_zone.player.stats_display.position.y), 0.025)
-			shake.tween_property(game_zone.player.stats_display, "position", Vector2(game_zone.player.stats_display.position.x, game_zone.player.stats_display.position.y), 0.025)
+			TweenManager._shake_tween(game_zone.player)
 			AudioManager.play_sound("Defense Phase.wav")
 			game_zone.player.player_anim.play("player_damage")
 			game_zone.player.current_hp -= defense_damage 

@@ -21,7 +21,8 @@ func _draw_card():
 	var card: Card = card_scene.instantiate()
 	game_zone.hand.add_card(card)
 	card.card_name = deck_cards[-1]
-	card._set_values(card.card_name)
+	card._get_values(card.card_name)
+	card._set_values()
 	card.visible = true
 	deck_cards.pop_back()
 	quantity_deck_cards = len(deck_cards)
@@ -30,5 +31,3 @@ func _full_hand():
 	while len(game_zone.hand.hand_cards) < game_zone.hand.max_cards_spread_angle:
 		if quantity_deck_cards >= 1:
 			_draw_card()
-		else:
-			break

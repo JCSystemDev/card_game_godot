@@ -36,52 +36,60 @@ func discard_card(_card_name: String):
 	game_zone.discard_pile.discard_sprite.add_child(card)
 	game_zone.discard_pile.discard_pile_cards.append(_card_name)
 	card.card_name = game_zone.discard_pile.discard_pile_cards[-1]
-	card._set_values(card.card_name)
+	card._get_values(card.card_name)
+	card._set_values()
 	card.visible = true
 	game_zone.discard_pile.quantity_discard_pile_cards = len(game_zone.discard_pile.discard_pile_cards)
 
 func apply_card_effect(_card: Card):
 	game_zone.player.current_gold -= _card.card_cost
-	if _card.card_type == "HP":
-		if _card.card_subtype == "+":
-			AudioManager.play_sound("Magic.wav")
-			game_zone.player.player_anim.play("player_magic")
-			if game_zone.player.current_hp + _card.number_effect > DataManager.player_stats[0]["player_hp"]:
-				game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
-
-			else:
-				game_zone.player.current_hp += _card.number_effect
-			if game_zone.player.current_attack > DataManager.player_stats[0]["player_hp"]:
-				game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
-		else:
-			game_zone.enemy.current_hp -= _card.number_effect
-			AudioManager.play_sound("Down Stats.wav")
-			if game_zone.enemy.current_hp <= 0:
-				game_zone.enemy.current_hp = 0	
-				game_zone.enemy.enemy_animation.play("death_enemy")
-				await game_zone.enemy.enemy_animation.animation_finished
-				game_zone.phase.current_phase = game_zone.phase.state.win
-				game_zone.phase._states(game_zone.phase.current_phase)
-
-	elif _card.card_type == "Attack":
-		if _card.card_subtype == "+":
-			AudioManager.play_sound("Equip.wav")
-			game_zone.player.current_attack += _card.number_effect
-		else:
-			AudioManager.play_sound("Down Stats.wav")
-			game_zone.enemy.current_attack -= _card.number_effect
-	elif _card.card_type == "Defense":
-		if _card.card_subtype == "+":
-			AudioManager.play_sound("Equip.wav")
-			game_zone.player.current_defense += _card.number_effect
-		else:
-			AudioManager.play_sound("Down Stats.wav")
-			game_zone.enemy.current_defense -= _card.number_effect
-	elif _card.card_type == "Gold":
-		if _card.card_subtype == "+":
+	var stat: String = _card.card_type
+	var target: String = _card.card_target
+	
+	match stat:
+		"Attack":
+			if target == "Player":
+				AudioManager.play_sound("Equip.wav")
+				game_zone.player.current_attack += _card.number_effect
+				
+			elif target == "Enemy":
+				AudioManager.play_sound("Down Stats.wav")
+				game_zone.enemy.current_attack -= _card.number_effect
+				if game_zone.enemy.current_attack <= 0:
+					game_zone.enemy.current_attack = 0	
+				
+		"Defense":
+			if target == "Player":
+				AudioManager.play_sound("Equip.wav")
+				game_zone.player.current_defense += _card.number_effect
+				
+			elif target == "Enemy":
+				AudioManager.play_sound("Down Stats.wav")
+				game_zone.enemy.current_defense -= _card.number_effect
+				if game_zone.enemy.current_defense <= 0:
+					game_zone.enemy.current_defense = 0	
+				
+		"HP":
+			if target == "Player":
+				AudioManager.play_sound("Magic.wav")
+				game_zone.player.player_anim.play("player_magic")
+				if game_zone.player.current_hp + _card.number_effect > DataManager.player_stats[0]["player_hp"]:
+					game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
+				
+			elif target == "Enemy":
+				AudioManager.play_sound("Down Stats.wav")
+				game_zone.enemy.current_hp -= _card.number_effect
+				if game_zone.enemy.current_hp <= 0:
+					game_zone.enemy.current_hp = 0	
+					game_zone.enemy.enemy_animation.play("death_enemy")
+					await game_zone.enemy.enemy_animation.animation_finished
+					game_zone.phase.current_phase = game_zone.phase.state.win
+					game_zone.phase._states(game_zone.phase.current_phase)
+				
+		"Gold":
 			AudioManager.play_sound("Magic.wav")
 			game_zone.player.current_gold += _card.number_effect
-
+			
 func reposition_cards():
 	var card_spread = min(angle_limit / hand_cards.size(), max_cards_spread_angle)
 	var current_angle = -(card_spread * (hand_cards.size() - 1))/2 - 90
