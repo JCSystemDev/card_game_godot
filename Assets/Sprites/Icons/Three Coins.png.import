@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0dwgdaa5vqxw"
-path="res://.godot/imported/Two Gold Coins.png-9296622040f31460b65c504f9c0bfdbc.ctex"
+uid="uid://bmjr6juk1pju5"
+path="res://.godot/imported/Three Coins.png-d1561c90adc5a604ff2a9b9b4b8a9876.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Icons/Two Gold Coins.png"
-dest_files=["res://.godot/imported/Two Gold Coins.png-9296622040f31460b65c504f9c0bfdbc.ctex"]
+source_file="res://Assets/Sprites/Icons/Three Coins.png"
+dest_files=["res://.godot/imported/Three Coins.png-d1561c90adc5a604ff2a9b9b4b8a9876.ctex"]
 
 [params]
 

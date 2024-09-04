@@ -6,17 +6,13 @@ var deck_cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Bas
 var enemies = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/enemies.json"))
 var dialogues = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/dialogues.json"))
 
-# Basic Enemies Categories (Low Power / Mid Power / High Power)
-var enemies_list_low: Array = []
-var enemies_list_mid: Array = []
-var enemies_list_high: Array = []
-
 # Deck
 var deck_list: Array = []
 
 # Player Variables
 var move_speed: float
 var player_stats
+var player_stats_load
 var player_stats_default = [{
 	
 	"player_name": "BENJAMIN",
@@ -47,5 +43,12 @@ func _save_game():
 	saved_file.close()
 
 func _load_game():
-	var player_stats_load = JSON.parse_string(FileAccess.get_file_as_string("user://player_stats_saved.json"))
+	player_stats_load = JSON.parse_string(FileAccess.get_file_as_string("user://player_stats_saved.json"))
 	player_stats = player_stats_load
+	
+func _save_file_exist():
+	player_stats_load = FileAccess.get_file_as_string("user://player_stats_saved.json")
+	if player_stats_load.is_empty():
+		return false
+	else:
+		return true

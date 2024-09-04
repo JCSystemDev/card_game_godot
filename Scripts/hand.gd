@@ -73,6 +73,7 @@ func apply_card_effect(_card: Card):
 			if target == "Player":
 				AudioManager.play_sound("Magic.wav")
 				game_zone.player.player_anim.play("player_magic")
+				game_zone.player.current_hp += _card.number_effect
 				if game_zone.player.current_hp + _card.number_effect > DataManager.player_stats[0]["player_hp"]:
 					game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
 				

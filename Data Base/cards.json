@@ -36,22 +36,22 @@
 	  "card_sprite":"res://Assets/Sprites/Icons/Gold Shield.png"
    },
    {
-	  "card_name":"Three Gold Coins",  
+	  "card_name":"Three Coins",  
 	  "card_type":"Gold",
 	  "card_subtype":"+",
 	  "card_target": "Player",	
 	  "number_effect":3,
 	  "card_cost":0,
-	  "card_sprite":"res://Assets/Sprites/Icons/Three Gold Coins.png"
+	  "card_sprite":"res://Assets/Sprites/Icons/Three Coins.png"
    },
    {
-	  "card_name":"Gold Coin",  
+	  "card_name":"One Coin",  
 	  "card_type":"Gold",
 	  "card_subtype":"+",
 	  "card_target": "Player",	
 	  "number_effect":1,
 	  "card_cost":0,
-	  "card_sprite":"res://Assets/Sprites/Icons/Gold Coin.png"
+	  "card_sprite":"res://Assets/Sprites/Icons/One Coin.png"
    },
 	{
 	  "card_name":"Cure Potion",  
@@ -135,13 +135,13 @@
 	  "card_sprite":"res://Assets/Sprites/Icons/Blood Shield.png"	
 	},
 	{
-	  "card_name":"Two Gold Coins",  
+	  "card_name":"Two Coins",  
 	  "card_type":"Gold",
 	  "card_subtype":"+",
 	  "card_target": "Player",	
 	  "number_effect":2,
 	  "card_cost":0,
-	  "card_sprite":"res://Assets/Sprites/Icons/Two Gold Coins.png"	
+	  "card_sprite":"res://Assets/Sprites/Icons/Two Coins.png"	
 	}
 
 ]

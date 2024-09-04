@@ -22,8 +22,8 @@ func _states(_state):
 		state.ingame:
 			AudioManager.play_music("Battle.mp3")
 		state.win:
+			AudioManager.play_music("Victory Fanfare.mp3")
 			DataManager.player_stats[0]["player_exp"] += game_zone.enemy.exp_points
-			print(DataManager.player_stats[0]["player_exp"])
 			game_zone.notifications.exp_label.set_text(str("YOU GOT ",game_zone.enemy.exp_points," EXP POINTS"))
 			game_zone.notifications.animation_player.play("show")
 			game_zone.notifications.endgame_label.set_text("YOU WIN")
@@ -35,8 +35,6 @@ func _states(_state):
 			game_zone.discard_pile.visible = false
 			game_zone.hand.visible = false
 			phase_label.visible = false
-			AudioManager.play_music("Victory Fanfare.mp3")
-			
 		state.lose:
 			game_zone.notifications.animation_player.play("show")
 			game_zone.notifications.endgame_label.set_text("YOU LOSE")
@@ -57,7 +55,6 @@ func _on_button_pressed():
 			phase_label.set_text(phases[0])
 			game_zone.deck._full_hand()
 			current_phase = phase.pay
-			AudioManager.play_sound("Draw Phase.wav")
 		phase.pay:
 			phase_label.set_text(phases[1])
 			game_zone.player.current_gold += DataManager.player_stats[0]["player_gold"]
