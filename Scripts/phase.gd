@@ -60,6 +60,7 @@ func _on_button_pressed():
 			game_zone.player.current_gold += DataManager.player_stats[0]["player_gold"]
 			current_phase = phase.summon
 			AudioManager.play_sound("Magic.wav")
+			game_zone.player.player_anim.play("player_gold")
 		phase.summon:
 			phase_label.set_text(phases[2])
 			current_phase = phase.attack

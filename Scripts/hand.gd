@@ -50,10 +50,12 @@ func apply_card_effect(_card: Card):
 		"Attack":
 			if target == "Player":
 				AudioManager.play_sound("Equip.wav")
+				game_zone.player.player_anim.play("player_attack")
 				game_zone.player.current_attack += _card.number_effect
 				
 			elif target == "Enemy":
 				AudioManager.play_sound("Down Stats.wav")
+				game_zone.enemy.enemy_animation.play("magic_damage_enemy")
 				game_zone.enemy.current_attack -= _card.number_effect
 				if game_zone.enemy.current_attack <= 0:
 					game_zone.enemy.current_attack = 0	
@@ -61,10 +63,12 @@ func apply_card_effect(_card: Card):
 		"Defense":
 			if target == "Player":
 				AudioManager.play_sound("Equip.wav")
+				game_zone.player.player_anim.play("player_defense")
 				game_zone.player.current_defense += _card.number_effect
 				
 			elif target == "Enemy":
 				AudioManager.play_sound("Down Stats.wav")
+				game_zone.enemy.enemy_animation.play("magic_damage_enemy")
 				game_zone.enemy.current_defense -= _card.number_effect
 				if game_zone.enemy.current_defense <= 0:
 					game_zone.enemy.current_defense = 0	
@@ -74,11 +78,12 @@ func apply_card_effect(_card: Card):
 				AudioManager.play_sound("Magic.wav")
 				game_zone.player.player_anim.play("player_magic")
 				game_zone.player.current_hp += _card.number_effect
-				if game_zone.player.current_hp + _card.number_effect > DataManager.player_stats[0]["player_hp"]:
+				if game_zone.player.current_hp > DataManager.player_stats[0]["player_hp"]:
 					game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
 				
 			elif target == "Enemy":
 				AudioManager.play_sound("Down Stats.wav")
+				game_zone.enemy.enemy_animation.play("magic_damage_enemy")
 				game_zone.enemy.current_hp -= _card.number_effect
 				if game_zone.enemy.current_hp <= 0:
 					game_zone.enemy.current_hp = 0	
@@ -89,6 +94,7 @@ func apply_card_effect(_card: Card):
 				
 		"Gold":
 			AudioManager.play_sound("Magic.wav")
+			game_zone.player.player_anim.play("player_gold")
 			game_zone.player.current_gold += _card.number_effect
 			
 func reposition_cards():
