@@ -121,7 +121,7 @@ func _handle_card_untouched(card: Card):
 
 func _input(event):
 	if event.is_action_pressed("mouse_click") && current_selected_card_index >= 0: 	
-		if game_zone.phase.current_phase == game_zone.phase.phase.attack:	
+		if game_zone.phase.current_phase == game_zone.phase.phase.summon:	
 			var _card = use_card(current_selected_card_index)
 			current_selected_card_index = -1	
 

@@ -6,9 +6,11 @@ extends CanvasLayer
 @onready var dialogue_box: CanvasLayer = $"."
 @onready var yes_button: Button = $"Yes Button"
 @onready var no_button: Button = $"No Button"
+var in_dialogue: bool
 var game_zone: PackedScene = load("res://Scenes/game_zone.tscn")
 
 func _ready():
+	in_dialogue = false
 	dialogue_box.visible = false
 
 func _load_dialogue_box(_line: String, _texture: Texture2D, _name: String):
@@ -18,6 +20,7 @@ func _load_dialogue_box(_line: String, _texture: Texture2D, _name: String):
 
 func _play_dialogue_box():
 	if !dialogue_box.visible:
+		in_dialogue = true
 		AudioManager.play_sound("Click.wav")
 		dialogue_animation.play("write_text")
 		yes_button.visible = true
@@ -27,10 +30,12 @@ func _on_yes_button_pressed():
 	DataManager.enemy_summon = avatar_name.text
 	Transition.load_scene(game_zone, "transition")
 	AudioManager.play_sound("Summon.wav")
+	in_dialogue = false
 	dialogue_box.visible = false
 
 func _on_no_button_pressed():
 	AudioManager.play_sound("Discard.wav")
 	yes_button.visible = false
 	no_button.visible = false
+	in_dialogue = false
 	dialogue_box.visible = false

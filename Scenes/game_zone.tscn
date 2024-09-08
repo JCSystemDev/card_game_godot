@@ -58,7 +58,8 @@ position = Vector2(800, 423)
 position = Vector2(480, 200)
 
 [node name="Phase" parent="." instance=ExtResource("8_o68r8")]
-position = Vector2(410, 499)
+position = Vector2(480, 500)
+scale = Vector2(1, 1)
 
 [node name="Background Parallax" parent="." instance=ExtResource("12_nb3cj")]
 

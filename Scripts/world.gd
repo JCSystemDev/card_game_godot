@@ -13,7 +13,7 @@ func _ready():
 	player_character.global_position = spawn_point.position
 
 func _input(event):
-	if event.is_action_pressed("ui_cancel") && !Transition.in_transition:
+	if event.is_action_pressed("ui_cancel") && !Transition.in_transition && !DialogueManager.in_dialogue:
 		swap_pause_state()
 
 

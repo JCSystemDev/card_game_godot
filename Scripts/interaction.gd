@@ -20,7 +20,7 @@ func unregister_area(area: InteractionArea):
 		active_areas.remove_at(index)
 		
 func _process(_delta):
-	if active_areas.size() > 0 && can_interact:
+	if active_areas.size() > 0 && can_interact && !DialogueManager.in_dialogue:
 		active_areas.sort_custom(_sort_by_distance_to_player)
 		interaction_label.text = active_areas[0].action_name
 		interaction_label.global_position = active_areas[0].global_position

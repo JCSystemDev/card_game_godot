@@ -3,6 +3,7 @@ class_name Deck extends Node2D
 @onready var card_scene: PackedScene = preload("res://Scenes/card.tscn")
 @onready var game_zone: GameZone = $".."
 @onready var cards_in_deck: Label = $"Deck Cards"
+var cards_draw: int
 var deck_cards: Array = []
 var quantity_deck_cards: int
 var path: String
@@ -34,8 +35,10 @@ func _draw_card():
 	quantity_deck_cards = len(deck_cards)
 
 func _full_hand():
+	cards_draw = 0
 	while len(game_zone.hand.hand_cards) < game_zone.hand.max_cards_spread_angle:
 		if quantity_deck_cards >= 1:
 			_draw_card()
+			cards_draw += 1
 			AudioManager.play_sound("Draw Phase.wav")
 			await get_tree().create_timer(0.25).timeout
