@@ -12,12 +12,16 @@ var enemy_texture: Texture2D
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact")
-	var frame_0: Texture2D = load("res://Assets/Sprites/Enemies/"+enemy_name+" 0.png")
-	var frame_1: Texture2D = load("res://Assets/Sprites/Enemies/"+enemy_name+" 1.png")
+	var frame_1: Texture2D = load("res://Assets/Sprites/Enemies/"+enemy_name+"1.png")
+	var frame_2: Texture2D = load("res://Assets/Sprites/Enemies/"+enemy_name+"2.png")
+	var frame_3: Texture2D = load("res://Assets/Sprites/Enemies/"+enemy_name+"3.png")
+	var frame_4: Texture2D = load("res://Assets/Sprites/Enemies/"+enemy_name+"4.png")
 	var animation_name: String = enemy_name + "_idle"
 	sprite_frames.add_animation(animation_name)
-	sprite_frames.add_frame(animation_name, frame_0)
 	sprite_frames.add_frame(animation_name, frame_1)
+	sprite_frames.add_frame(animation_name, frame_2)
+	sprite_frames.add_frame(animation_name, frame_3)
+	sprite_frames.add_frame(animation_name, frame_4)
 	animated_sprite.sprite_frames = sprite_frames
 	animated_sprite.play(animation_name)
 	for enemy_dialogues in DataManager.dialogues:

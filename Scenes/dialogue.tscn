@@ -1,12 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0dtv13ju1vy7"]
+[gd_scene load_steps=14 format=3 uid="uid://b0dtv13ju1vy7"]
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ofgcj"]
-[ext_resource type="Texture2D" uid="uid://foo888ujt3sw" path="res://Assets/Sprites/Templates/Deck BG.png" id="2_kxijx"]
-[ext_resource type="Texture2D" uid="uid://btytcuhx102vh" path="res://Assets/Sprites/Templates/Deck Marquee.png" id="3_b7jfm"]
-[ext_resource type="Texture2D" uid="uid://o8hb7pcew124" path="res://Assets/Sprites/Templates/Portrait Character Background.png" id="4_ly73h"]
-[ext_resource type="Texture2D" uid="uid://kr8vk66b6gy8" path="res://Assets/Sprites/Portraits/Slime.png" id="5_vappm"]
-[ext_resource type="Texture2D" uid="uid://cau37y3yd4x8f" path="res://Assets/Sprites/Templates/Portrait Player Marquee.png" id="6_mmngb"]
+[ext_resource type="Texture2D" uid="uid://bpta8vn2ypwib" path="res://Assets/Sprites/UI/Ui/Dialog/DialogBoxFaceset.png" id="2_cw0m0"]
+[ext_resource type="Texture2D" uid="uid://hjsdbys4ql6v" path="res://Assets/Sprites/UI/Ui/Dialog/YesButton.png" id="5_2ef1j"]
+[ext_resource type="Texture2D" uid="uid://bhet3c7hydv" path="res://Assets/Sprites/Portraits/Slime.png" id="5_vappm"]
+[ext_resource type="Texture2D" uid="uid://bnac8nbjydhb" path="res://Assets/Sprites/UI/Ui/Dialog/NoButton.png" id="6_15fxo"]
+[ext_resource type="Texture2D" uid="uid://b65f4eafnwesx" path="res://Assets/Sprites/UI/Ui/Dialog/YesButton(Hover).png" id="6_e82sv"]
+[ext_resource type="Texture2D" uid="uid://dfc2mrbnr8cme" path="res://Assets/Sprites/UI/Ui/Dialog/YesButton(Pressed).png" id="7_h34tw"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="7_xk3jm"]
+[ext_resource type="Texture2D" uid="uid://bg642ax365tw5" path="res://Assets/Sprites/UI/Ui/Dialog/NoButton(Hover).png" id="9_dkakb"]
+[ext_resource type="Texture2D" uid="uid://c8a8mwmcbkbdd" path="res://Assets/Sprites/UI/Ui/Dialog/NoButton(Pressed).png" id="10_vx3nd"]
 
 [sub_resource type="Animation" id="Animation_i4en7"]
 length = 0.001
@@ -64,50 +67,34 @@ script = ExtResource("1_ofgcj")
 [node name="Background" type="Node2D" parent="."]
 
 [node name="Background Sprite" type="Sprite2D" parent="Background"]
-modulate = Color(0.31401, 2.40654e-07, 9.62615e-08, 1)
-position = Vector2(480, 360)
-scale = Vector2(4, 4)
-texture = ExtResource("2_kxijx")
-
-[node name="Marquee" type="Sprite2D" parent="Background"]
-position = Vector2(480, 360)
-scale = Vector2(4, 4)
-texture = ExtResource("3_b7jfm")
+position = Vector2(482, 464)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("2_cw0m0")
 
 [node name="Character Avatar" type="Node2D" parent="."]
 position = Vector2(-56, -16)
 
-[node name="Background" type="Sprite2D" parent="Character Avatar"]
-modulate = Color(0.129412, 0, 0.313726, 1)
-position = Vector2(280, 488)
-scale = Vector2(3, 3)
-texture = ExtResource("4_ly73h")
-
 [node name="Avatar" type="Sprite2D" parent="Character Avatar"]
-position = Vector2(280, 488)
-scale = Vector2(1.6, 1.6)
+position = Vector2(213, 490)
+scale = Vector2(2.4, 2.4)
 texture = ExtResource("5_vappm")
 
-[node name="Marquee" type="Sprite2D" parent="Character Avatar"]
-position = Vector2(280, 488)
-scale = Vector2(3, 3)
-texture = ExtResource("6_mmngb")
-
 [node name="Name" type="Label" parent="Character Avatar"]
-offset_left = 344.0
-offset_top = 432.0
-offset_right = 484.0
-offset_bottom = 455.0
+offset_left = 162.0
+offset_top = 410.0
+offset_right = 325.0
+offset_bottom = 429.0
 theme_override_fonts/font = ExtResource("7_xk3jm")
 theme_override_font_sizes/font_size = 10
 text = "Haunter Tree"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Dialogue" type="Label" parent="."]
-offset_left = 288.0
-offset_top = 448.0
-offset_right = 744.0
-offset_bottom = 504.0
+offset_left = 227.0
+offset_top = 431.0
+offset_right = 847.0
+offset_bottom = 519.0
 theme_override_fonts/font = ExtResource("7_xk3jm")
 theme_override_font_sizes/font_size = 10
 text = "Esto es una prueba de dialogo. En donde el jugador esta leyendo lo que el personaje le esta mencionando en cada linea."
@@ -120,25 +107,30 @@ libraries = {
 "": SubResource("AnimationLibrary_g1m1f")
 }
 
-[node name="Yes Button" type="Button" parent="."]
-visible = false
-offset_left = 456.0
-offset_top = 504.0
-offset_right = 506.0
-offset_bottom = 528.0
-theme_override_fonts/font = ExtResource("7_xk3jm")
-theme_override_font_sizes/font_size = 10
-text = "YES"
+[node name="Yes Button" type="TextureButton" parent="."]
+offset_left = 472.0
+offset_top = 480.0
+offset_right = 537.0
+offset_bottom = 520.0
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("5_2ef1j")
+texture_pressed = ExtResource("6_e82sv")
+texture_hover = ExtResource("7_h34tw")
+texture_disabled = ExtResource("6_e82sv")
+texture_focused = ExtResource("7_h34tw")
+stretch_mode = 0
 
-[node name="No Button" type="Button" parent="."]
-visible = false
-offset_left = 520.0
-offset_top = 504.0
-offset_right = 568.0
-offset_bottom = 528.0
-theme_override_fonts/font = ExtResource("7_xk3jm")
-theme_override_font_sizes/font_size = 10
-text = "NO"
+[node name="No Button" type="TextureButton" parent="."]
+offset_left = 537.0
+offset_top = 480.0
+offset_right = 602.0
+offset_bottom = 520.0
+texture_normal = ExtResource("6_15fxo")
+texture_pressed = ExtResource("9_dkakb")
+texture_hover = ExtResource("10_vx3nd")
+texture_disabled = ExtResource("9_dkakb")
+texture_focused = ExtResource("10_vx3nd")
+stretch_mode = 0
 
 [connection signal="pressed" from="Yes Button" to="." method="_on_yes_button_pressed"]
 [connection signal="pressed" from="No Button" to="." method="_on_no_button_pressed"]

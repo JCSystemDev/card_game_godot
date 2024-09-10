@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://xg4d08tiinl8"]
+[gd_scene load_steps=13 format=3 uid="uid://xg4d08tiinl8"]
 
 [ext_resource type="Script" path="res://Scripts/pause.gd" id="1_tussv"]
-[ext_resource type="Texture2D" uid="uid://dydhk7j2xraxk" path="res://Assets/Sprites/Portraits/Player Portrait.png" id="2_55yg0"]
-[ext_resource type="Texture2D" uid="uid://cau37y3yd4x8f" path="res://Assets/Sprites/Templates/Portrait Player Marquee.png" id="3_8f4t0"]
+[ext_resource type="Texture2D" uid="uid://dyos37njwcqw" path="res://Assets/Sprites/UI/Ui/Dialog/FacesetBox.png" id="2_avlft"]
+[ext_resource type="Texture2D" uid="uid://373xusfbumn7" path="res://Assets/Sprites/Portraits/Player.png" id="2_hj4ix"]
 [ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="4_kc4od"]
-[ext_resource type="Texture2D" uid="uid://bv6t5snecp0ln" path="res://Assets/Sprites/Templates/Description BG.png" id="5_eh8mm"]
-[ext_resource type="Texture2D" uid="uid://n4fd05a28si2" path="res://Assets/Sprites/Templates/Description Marquee.png" id="6_j8vsx"]
+[ext_resource type="LabelSettings" uid="uid://djg4hy1teosjq" path="res://Styles/Label Font 2.tres" id="5_8cxim"]
+[ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="5_a0kne"]
+[ext_resource type="FontFile" uid="uid://8q3wd1f811wn" path="res://Assets/Sprites/UI/Ui/Font/NormalFont.ttf" id="6_6balk"]
+[ext_resource type="Texture2D" uid="uid://6viku28itdwd" path="res://Assets/Sprites/Templates/Screen Marquee.png" id="8_jykdq"]
+[ext_resource type="Texture2D" uid="uid://bg1y7eyqygwhm" path="res://Assets/Sprites/Backgrounds/Background 4.png" id="9_nhv27"]
 
 [sub_resource type="Animation" id="Animation_vtboo"]
 length = 0.001
@@ -43,130 +46,154 @@ _data = {
 "show_text_box": SubResource("Animation_lhrdh")
 }
 
-[node name="Pause" type="Control"]
+[node name="Pause" type="CanvasLayer"]
 process_mode = 3
-z_index = 10
-layout_mode = 3
-anchors_preset = 0
+layer = 2
 script = ExtResource("1_tussv")
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
-offset_top = -1.0
-offset_right = 960.0
-offset_bottom = 539.0
-color = Color(0.156863, 0, 0, 1)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+process_mode = 3
+layer = 2
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+process_mode = 3
+z_index = 1
+motion_mirroring = Vector2(1024, 508)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+process_mode = 3
+z_index = 1
+position = Vector2(480, 267)
+scale = Vector2(2, 2)
+texture = ExtResource("9_nhv27")
 
 [node name="Player" type="Node2D" parent="."]
-position = Vector2(312, 140)
+position = Vector2(312, 115)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(295, 2)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("8_jykdq")
+
+[node name="Player Marquee" type="Sprite2D" parent="Player"]
+position = Vector2(0, 2)
+scale = Vector2(4, 4)
+texture = ExtResource("2_avlft")
 
 [node name="Player Portrait" type="Sprite2D" parent="Player"]
 scale = Vector2(4, 4)
-texture = ExtResource("2_55yg0")
-
-[node name="Player Marquee" type="Sprite2D" parent="Player"]
-scale = Vector2(4, 4)
-texture = ExtResource("3_8f4t0")
+texture = ExtResource("2_hj4ix")
 
 [node name="Name" type="Label" parent="Player"]
-offset_left = 107.0
+offset_left = 136.0
 offset_top = -65.0
-offset_right = 411.0
+offset_right = 353.0
 offset_bottom = -33.0
 theme_override_fonts/font = ExtResource("4_kc4od")
 theme_override_font_sizes/font_size = 15
 text = "PEPITO"
+label_settings = ExtResource("5_8cxim")
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Player"]
-offset_left = 107.0
-offset_top = -26.0
-offset_right = 199.0
-offset_bottom = 6.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
+offset_left = 135.0
+offset_top = -32.0
+offset_right = 227.0
 text = "LV. 99"
+label_settings = ExtResource("5_a0kne")
 vertical_alignment = 1
 
 [node name="Attack" type="Label" parent="Player"]
-offset_left = 290.0
-offset_top = -26.0
-offset_right = 514.0
-offset_bottom = 6.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
+offset_left = 135.0
+offset_right = 227.0
+offset_bottom = 32.0
 text = "ATK 99"
+label_settings = ExtResource("5_a0kne")
 vertical_alignment = 1
 
 [node name="Defense" type="Label" parent="Player"]
-offset_left = 290.0
-offset_top = 12.0
-offset_right = 542.0
-offset_bottom = 44.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
+offset_left = 227.0
+offset_right = 354.0
+offset_bottom = 32.0
 text = "DEF 99"
+label_settings = ExtResource("5_a0kne")
 vertical_alignment = 1
 
 [node name="HP" type="Label" parent="Player"]
-offset_left = 107.0
-offset_top = 12.0
-offset_right = 285.0
-offset_bottom = 44.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
+offset_left = 227.0
+offset_top = -32.0
+offset_right = 354.0
 text = "HP 100/100"
+label_settings = ExtResource("5_a0kne")
 vertical_alignment = 1
 
 [node name="Exp" type="Label" parent="Player"]
-offset_left = 108.0
-offset_top = 46.0
-offset_right = 279.0
-offset_bottom = 78.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
+offset_left = 135.0
+offset_top = 32.0
+offset_right = 306.0
+offset_bottom = 64.0
 text = "EXP 100"
+label_settings = ExtResource("5_a0kne")
 vertical_alignment = 1
 
 [node name="Buttons" type="Node2D" parent="."]
-position = Vector2(250, 229)
+position = Vector2(77, 208)
 
-[node name="Options Button" type="Button" parent="Buttons"]
-offset_left = 120.0
-offset_top = 92.0
-offset_right = 348.0
-offset_bottom = 132.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
-text = "OPTIONS
-"
+[node name="TextureRect" type="TextureRect" parent="Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 88.0
+offset_top = 11.0
+offset_right = 378.0
+offset_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_avlft")
 
 [node name="Resume Button" type="Button" parent="Buttons"]
-offset_left = 120.0
+offset_left = 119.0
 offset_top = 42.0
-offset_right = 348.0
+offset_right = 347.0
 offset_bottom = 82.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
+theme_override_fonts/font = ExtResource("6_6balk")
+theme_override_font_sizes/font_size = 25
 text = "RESUME
 "
 
+[node name="Options Button" type="Button" parent="Buttons"]
+offset_left = 119.0
+offset_top = 84.0
+offset_right = 347.0
+offset_bottom = 126.0
+theme_override_fonts/font = ExtResource("6_6balk")
+theme_override_font_sizes/font_size = 25
+text = "OPTIONS
+"
+icon_alignment = 1
+expand_icon = true
+
 [node name="Save Button" type="Button" parent="Buttons"]
-offset_left = 120.0
-offset_top = 140.0
-offset_right = 348.0
-offset_bottom = 180.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
+offset_left = 119.0
+offset_top = 126.0
+offset_right = 347.0
+offset_bottom = 168.0
+theme_override_fonts/font = ExtResource("6_6balk")
+theme_override_font_sizes/font_size = 25
 text = "SAVE GAME"
 
 [node name="Exit Button" type="Button" parent="Buttons"]
-offset_left = 120.0
-offset_top = 188.0
-offset_right = 348.0
-offset_bottom = 228.0
-theme_override_fonts/font = ExtResource("4_kc4od")
-theme_override_font_sizes/font_size = 15
+offset_left = 119.0
+offset_top = 168.0
+offset_right = 347.0
+offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("6_6balk")
+theme_override_font_sizes/font_size = 25
 text = "MAIN MENU"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -175,30 +202,26 @@ libraries = {
 }
 
 [node name="Text Box" type="Node2D" parent="."]
-position = Vector2(566, 140)
+position = Vector2(571, 118)
 scale = Vector2(1e-05, 1)
 
 [node name="Background" type="Sprite2D" parent="Text Box"]
-modulate = Color(0.235662, 1.81994e-07, 8.42288e-08, 1)
-scale = Vector2(3.5, 3.5)
-texture = ExtResource("5_eh8mm")
-
-[node name="Marquee" type="Sprite2D" parent="Text Box"]
-scale = Vector2(3.5, 3.5)
-texture = ExtResource("6_j8vsx")
+position = Vector2(36, -1)
+scale = Vector2(2.48718, 2.5)
+texture = ExtResource("8_jykdq")
 
 [node name="Message" type="Label" parent="Text Box"]
-offset_left = -129.0
-offset_top = -20.0
-offset_right = 131.0
-offset_bottom = 12.0
+offset_left = -133.0
+offset_top = -70.0
+offset_right = 205.0
+offset_bottom = 68.0
 theme_override_fonts/font = ExtResource("4_kc4od")
 theme_override_font_sizes/font_size = 20
 text = "GAME SAVED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Buttons/Options Button" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="Buttons/Resume Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Buttons/Options Button" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="Buttons/Save Button" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="Buttons/Exit Button" to="." method="_on_exit_button_pressed"]

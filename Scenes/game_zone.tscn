@@ -1,8 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3o6dcrxknk44"]
+[gd_scene load_steps=11 format=3 uid="uid://d3o6dcrxknk44"]
 
 [ext_resource type="Script" path="res://Scripts/game_zone.gd" id="1_llf18"]
-[ext_resource type="Shader" path="res://Shaders/flash.gdshader" id="2_3st70"]
-[ext_resource type="Texture2D" uid="uid://btytcuhx102vh" path="res://Assets/Sprites/Templates/Deck Marquee.png" id="2_6jd3i"]
 [ext_resource type="Texture2D" uid="uid://foo888ujt3sw" path="res://Assets/Sprites/Templates/Deck BG.png" id="2_smbbs"]
 [ext_resource type="PackedScene" uid="uid://bcq0ht30y8gbk" path="res://Scenes/hand.tscn" id="4_3ab81"]
 [ext_resource type="PackedScene" uid="uid://dbxp7761bc86l" path="res://Scenes/discard_pile.tscn" id="4_hmo73"]
@@ -12,11 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://dail5a5a8d0bt" path="res://Scenes/player.tscn" id="8_vunv7"]
 [ext_resource type="PackedScene" uid="uid://0eq60ymgekep" path="res://Scenes/notifications.tscn" id="12_jul5n"]
 [ext_resource type="PackedScene" uid="uid://dq23rh5crhlmk" path="res://Scenes/parallax.tscn" id="12_nb3cj"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ir3j1"]
-shader = ExtResource("2_3st70")
-shader_parameter/active = false
-shader_parameter/flash_color = Color(1, 0, 0, 1)
 
 [node name="GameZone" type="Node2D" node_paths=PackedStringArray("player", "deck", "hand", "phase", "discard_pile", "enemy", "notifications")]
 script = ExtResource("1_llf18")
@@ -30,32 +23,26 @@ notifications = NodePath("Notifications")
 
 [node name="Background Cards" type="Node2D" parent="."]
 
-[node name="Background Sprite" type="Sprite2D" parent="Background Cards"]
-modulate = Color(0.333333, 0, 0, 1)
-material = SubResource("ShaderMaterial_ir3j1")
+[node name="Sprite2D" type="Sprite2D" parent="Background Cards"]
+modulate = Color(0.0784314, 0.105882, 0.105882, 0.588235)
 position = Vector2(480, 270)
 scale = Vector2(6, 6)
 texture = ExtResource("2_smbbs")
 
-[node name="Marque Sprite" type="Sprite2D" parent="Background Cards"]
-position = Vector2(480, 270)
-scale = Vector2(6, 6)
-texture = ExtResource("2_6jd3i")
-
 [node name="Deck" parent="." instance=ExtResource("4_i1c38")]
-position = Vector2(180, 445)
+position = Vector2(180, 427)
 
 [node name="Discard Pile" parent="." instance=ExtResource("4_hmo73")]
-position = Vector2(80, 446)
+position = Vector2(80, 426)
 
 [node name="Hand" parent="." instance=ExtResource("4_3ab81")]
 position = Vector2(480, 1210)
 
 [node name="Player" parent="." instance=ExtResource("8_vunv7")]
-position = Vector2(800, 423)
+position = Vector2(806, 447)
 
 [node name="Enemy" parent="." instance=ExtResource("8_a3f2b")]
-position = Vector2(480, 200)
+position = Vector2(480, 201)
 
 [node name="Phase" parent="." instance=ExtResource("8_o68r8")]
 position = Vector2(480, 500)
@@ -64,3 +51,4 @@ scale = Vector2(1, 1)
 [node name="Background Parallax" parent="." instance=ExtResource("12_nb3cj")]
 
 [node name="Notifications" parent="." instance=ExtResource("12_jul5n")]
+position = Vector2(319, 86)

@@ -1,15 +1,10 @@
-extends Node2D
+extends CanvasLayer
 class_name Interaction
 
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var interaction_label = $Label
 var active_areas: Array = []
 var can_interact: bool = true
-
-func _ready():
-	var new_sb = StyleBoxFlat.new()
-	new_sb.bg_color = Color.html("00000040")
-	interaction_label.add_theme_stylebox_override("normal", new_sb)
 
 func register_area(area: InteractionArea):
 	active_areas.push_back(area)

@@ -25,7 +25,7 @@ script = ExtResource("1_q78fy")
 shape = SubResource("RectangleShape2D_llc0d")
 
 [node name="Front BG" type="Sprite2D" parent="."]
-modulate = Color(0.290445, 0.240564, 0.379294, 1)
+modulate = Color(0.18, 0.25, 0.325, 1)
 texture_filter = 1
 position = Vector2(3.8147e-06, 0)
 texture = ExtResource("1_rgnd8")
@@ -40,9 +40,9 @@ position = Vector2(-1, 1)
 [node name="Card Name" type="Label" parent="Name Display"]
 texture_filter = 1
 offset_left = -40.0
-offset_top = -57.0
+offset_top = -60.0
 offset_right = 42.0
-offset_bottom = -48.0
+offset_bottom = -51.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_fonts/font = ExtResource("3_mhy7l")
@@ -54,20 +54,20 @@ vertical_alignment = 1
 
 [node name="Card Avatar" type="Sprite2D" parent="Card Image"]
 texture_filter = 1
-position = Vector2(0, -14)
+position = Vector2(0, -17)
+scale = Vector2(2.5, 2.5)
 region_rect = Rect2(531, 1009, 43, 47)
 
 [node name="Description Display" type="Node2D" parent="."]
 position = Vector2(0, -1)
 
 [node name="Description BG" type="Sprite2D" parent="Description Display"]
-self_modulate = Color(0.360784, 0.309804, 0.439216, 1)
+self_modulate = Color(0.180392, 0.25098, 0.32549, 1)
 texture_filter = 1
 position = Vector2(0, 38)
 texture = ExtResource("6_6vvrd")
 
 [node name="Description Marquee" type="Sprite2D" parent="Description Display"]
-self_modulate = Color(0.227451, 0.160784, 0.231373, 1)
 texture_filter = 1
 position = Vector2(0, 38)
 texture = ExtResource("7_0njmf")
@@ -75,9 +75,9 @@ texture = ExtResource("7_0njmf")
 [node name="Description" type="Label" parent="Description Display"]
 texture_filter = 1
 offset_left = -39.0
-offset_top = 23.0
+offset_top = 22.0
 offset_right = 39.0
-offset_bottom = 59.0
+offset_bottom = 34.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 0

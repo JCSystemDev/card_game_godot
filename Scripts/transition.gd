@@ -40,6 +40,7 @@ func play_transition(transition: String):
 	transition_canvas.hide()
 
 func quit_transition(transition: String):
+	transition_canvas.show()
 	animation_player.play(transition)
 	await animation_player.animation_finished
 	get_tree().quit()

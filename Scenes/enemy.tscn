@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ohwgoqbg0tra"]
+[gd_scene load_steps=12 format=3 uid="uid://ohwgoqbg0tra"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_t6yvp"]
-[ext_resource type="Texture2D" uid="uid://bmdbln42iycf4" path="res://Assets/Sprites/Portraits/Haunted Tree.png" id="2_bx33h"]
-[ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="3_8vp7f"]
+[ext_resource type="Texture2D" uid="uid://dyos37njwcqw" path="res://Assets/Sprites/UI/Ui/Dialog/FacesetBox.png" id="2_t1uur"]
+[ext_resource type="Texture2D" uid="uid://bhet3c7hydv" path="res://Assets/Sprites/Portraits/Slime.png" id="2_vgjwd"]
 [ext_resource type="StyleBox" uid="uid://bjxsbha0couvb" path="res://Styles/Background Bar.tres" id="4_q7pg3"]
+[ext_resource type="LabelSettings" uid="uid://djg4hy1teosjq" path="res://Styles/Label Font 2.tres" id="4_uclfy"]
 [ext_resource type="StyleBox" uid="uid://ivyegv5konhs" path="res://Styles/Fill Bar.tres" id="5_jxqsj"]
 
 [sub_resource type="Animation" id="Animation_n1mmf"]
@@ -103,10 +104,15 @@ _data = {
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_t6yvp")
 
+[node name="Marquee" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("2_t1uur")
+
 [node name="Enemy Sprite" type="Sprite2D" parent="."]
-position = Vector2(0, 40)
-scale = Vector2(3, 3)
-texture = ExtResource("2_bx33h")
+position = Vector2(0, 2)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("2_vgjwd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -115,24 +121,25 @@ libraries = {
 
 [node name="Enemy Name" type="Label" parent="."]
 texture_filter = 1
-offset_left = -109.0
-offset_top = -51.0
-offset_right = 109.0
-offset_bottom = -35.0
+offset_left = -132.0
+offset_top = -116.0
+offset_right = 132.0
+offset_bottom = -84.0
 text = "ENEMY NAME"
-label_settings = ExtResource("3_8vp7f")
+label_settings = ExtResource("4_uclfy")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Enemy Bar" type="Node2D" parent="."]
-scale = Vector2(2, 2)
+position = Vector2(0, -30)
+scale = Vector2(4, 4)
 
 [node name="Enemy HP" type="ProgressBar" parent="Enemy Bar"]
 texture_filter = 1
 offset_left = -26.0
-offset_top = -33.0
+offset_top = -27.0
 offset_right = 26.0
-offset_bottom = -28.0
+offset_bottom = -22.0
 theme_override_styles/background = ExtResource("4_q7pg3")
 theme_override_styles/fill = ExtResource("5_jxqsj")
 max_value = 30.0

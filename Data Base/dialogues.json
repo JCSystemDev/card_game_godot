@@ -4,15 +4,15 @@
 		"dialogue_challenge": "Are you ready to get stuck?"
 	},
 	{
-		"enemy_name": "Gnome",
+		"enemy_name": "Bat",
 		"dialogue_challenge": "Dare to challenge my ancient wisdom?"
 	},
 	{
-		"enemy_name": "Haunted Tree",
+		"enemy_name": "Flam",
 		"dialogue_challenge": "Will you brave the terror I bring?"
 	},
 	{
-		"enemy_name": "Venom Frog",
+		"enemy_name": "Beast",
 		"dialogue_challenge": "My poison is deadly, but is your courage stronger?"
 	}
 ]

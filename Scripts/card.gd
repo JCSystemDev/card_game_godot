@@ -23,7 +23,7 @@ func _ready():
 	
 func _get_values(_card_name: String):
 	for card in DataManager.cards:
-		if card["card_name"] == card_name:
+		if card["card_name"] == _card_name:
 			card_type = card["card_type"]
 			card_target = card["card_target"]
 			number_effect = card["number_effect"]
@@ -38,10 +38,10 @@ func _set_values():
 	card_image.set_texture(card_sprite)
 
 func highlight():
-	bg_sprite.set_modulate(Color(0.627, 0.565, 0.749))
+	bg_sprite.set_modulate(Color(0.36, 0.5, 0.650))
 
 func unhighlight():
-	bg_sprite.set_modulate(Color(0.29, 0.241, 0.379))
+	bg_sprite.set_modulate(Color(0.18, 0.25, 0.325))
 
 func _on_area_2d_mouse_entered():
 	mouse_entered.emit(self)

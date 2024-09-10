@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://1d6d3ntja4pq"]
 
 [ext_resource type="Script" path="res://Scripts/phase.gd" id="1_srb3h"]
-[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="2_g1qem"]
+[ext_resource type="FontFile" uid="uid://8q3wd1f811wn" path="res://Assets/Sprites/UI/Ui/Font/NormalFont.ttf" id="3_6rpnm"]
 [ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="3_rk7su"]
 
 [node name="Phase" type="Node2D"]
@@ -12,22 +12,23 @@ script = ExtResource("1_srb3h")
 
 [node name="Phase Button" type="Button" parent="Button"]
 texture_filter = 1
-offset_left = -83.5979
-offset_right = 84.4021
-offset_bottom = 24.0
-theme_override_fonts/font = ExtResource("2_g1qem")
-theme_override_font_sizes/font_size = 10
-text = "BATTLE PHASE"
+offset_left = -101.0
+offset_top = -8.0
+offset_right = 102.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_6rpnm")
+theme_override_font_sizes/font_size = 20
+text = "BATTLE  PHASE"
 icon_alignment = 1
 
 [node name="Label" type="Node2D" parent="."]
 
 [node name="Phase Label" type="Label" parent="Label"]
-offset_left = -436.0
-offset_top = -143.0
-offset_right = -260.0
-offset_bottom = -127.0
-text = "DEFENSE PHASE"
+offset_left = -444.444
+offset_top = -172.0
+offset_right = -250.444
+offset_bottom = -144.0
+text = "DEFENSE  PHASE"
 label_settings = ExtResource("3_rk7su")
 horizontal_alignment = 1
 vertical_alignment = 1

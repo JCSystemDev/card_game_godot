@@ -82,9 +82,11 @@ func apply_card_effect(_card: Card):
 					game_zone.player.current_hp = DataManager.player_stats[0]["player_hp"]
 				
 			elif target == "Enemy":
-				AudioManager.play_sound("Down Stats.wav")
-				game_zone.enemy.enemy_animation.play("magic_damage_enemy")
+				AudioManager.play_sound("Attack Phase.wav")
+				TweenManager._shake_tween(game_zone.enemy)
 				game_zone.enemy.current_hp -= _card.number_effect
+				game_zone.enemy.enemy_animation.play("damage_enemy")
+				await game_zone.enemy.enemy_animation.animation_finished
 				if game_zone.enemy.current_hp <= 0:
 					game_zone.enemy.current_hp = 0	
 					game_zone.enemy.enemy_animation.play("death_enemy")

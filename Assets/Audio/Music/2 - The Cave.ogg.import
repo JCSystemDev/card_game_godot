@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://djcr26k7opoop"
+path="res://.godot/imported/2 - The Cave.ogg-d248a54bb3fba834c76ff3d9ceffc5b6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/2 - The Cave.ogg"
+dest_files=["res://.godot/imported/2 - The Cave.ogg-d248a54bb3fba834c76ff3d9ceffc5b6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -7,13 +7,13 @@ extends Control
 
 func _ready():
 	Transition.animation_player.play_backwards("transition")
-	AudioManager.play_music("Main Menu.mp3")
+	AudioManager.play_music("6 - Story.ogg")
 	new_game.grab_focus()
 	if !DataManager._save_file_exist():
 		load_game.set_disabled(true)
 	
 func parallax_bg(delta_time) -> void:
-	get_node("ParallaxBackground").scroll_base_offset -= Vector2(1, 0) * 100 * delta_time	
+	get_node("ParallaxBackground").scroll_base_offset -= Vector2(1, 0) * 250 * delta_time	
 
 func _process(delta):
 	parallax_bg(delta)

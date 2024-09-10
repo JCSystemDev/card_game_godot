@@ -1,4 +1,5 @@
 extends Node2D
+class_name Data
 
 # Data Base Access
 var cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/cards.json"))

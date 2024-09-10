@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 var transition: bool
 var player_scene = load("res://Scenes/player_character.tscn")
@@ -7,7 +7,8 @@ var player_scene = load("res://Scenes/player_character.tscn")
 
 func _ready():
 	pause_screen.hide()
-	AudioManager.play_music("World.mp3")
+	pause_screen.parallax.hide()
+	AudioManager.play_music("4 - Village.ogg")
 	var player_character = player_scene.instantiate()
 	add_child(player_character)
 	player_character.global_position = spawn_point.position
@@ -25,12 +26,14 @@ func swap_pause_state():
 		Transition.play_transition("crossfade")
 		await get_tree().create_timer(0.2).timeout
 		pause_screen.visible = true
+		pause_screen.parallax.show()
 		
 	elif pause_screen.visible:
 		get_tree().paused = false
 		Transition.play_transition("crossfade")
 		await get_tree().create_timer(0.2).timeout
 		pause_screen.visible = false
+		pause_screen.parallax.hide()
 		
 		
 		

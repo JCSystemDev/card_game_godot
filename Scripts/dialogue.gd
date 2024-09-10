@@ -4,8 +4,8 @@ extends CanvasLayer
 @onready var avatar_dialogue: Label = $Dialogue
 @onready var dialogue_animation: AnimationPlayer = $AnimationPlayer
 @onready var dialogue_box: CanvasLayer = $"."
-@onready var yes_button: Button = $"Yes Button"
-@onready var no_button: Button = $"No Button"
+@onready var yes_button: TextureButton = $"Yes Button"
+@onready var no_button: TextureButton = $"No Button"
 var in_dialogue: bool
 var game_zone: PackedScene = load("res://Scenes/game_zone.tscn")
 

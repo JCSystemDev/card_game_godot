@@ -2,7 +2,7 @@ class_name Phase extends Node2D
 
 enum phase {draw, summon, battle}
 enum state {ingame, win, lose}
-var phases: Array = ["DRAW PHASE", "PAY PHASE", "SUMMON PHASE", "ATTACK PHASE", "DEFENSE PHASE"]
+var phases: Array = ["DRAW  PHASE", "PAY  PHASE", "SUMMON  PHASE", "ATTACK  PHASE", "DEFENSE  PHASE"]
 var current_phase
 var current_state
 @onready var game_zone: GameZone = $".."
@@ -12,7 +12,7 @@ var current_state
 @onready var label_node: Node2D = $Label
 
 func _ready():
-	AudioManager.play_music("Battle.mp3")
+	AudioManager.play_music("28 - Tension.ogg")
 	current_state = state.ingame
 	phase_label.set_text("START PHASE")
 	TweenManager._appear_tween(label_node)
@@ -26,7 +26,7 @@ func _states(_state):
 		state.ingame:
 			pass
 		state.win:
-			AudioManager.play_music("Victory Fanfare.mp3")
+			AudioManager.play_music("11 - Clearing.ogg")
 			DataManager.player_stats[0]["player_exp"] += game_zone.enemy.exp_points
 			game_zone.notifications.exp_label.set_text(str("YOU GOT ",game_zone.enemy.exp_points," EXP POINTS"))
 			game_zone.notifications.animation_player.play("show")
@@ -40,10 +40,12 @@ func _states(_state):
 			game_zone.hand.hide()
 			phase_label.hide()
 		state.lose:
+			AudioManager.play_music("10 - Dark Castle.ogg")
 			game_zone.notifications.endgame_label.set_text("YOU LOSE")
 			game_zone.notifications.animation_player.play("show")
 			game_zone.notifications.show()
 			game_zone.notifications.lose_buttons.show()
+			game_zone.player.hide()
 			game_zone.enemy.hide()
 			phase_button.hide()
 			game_zone.deck.hide()
@@ -51,7 +53,6 @@ func _states(_state):
 			game_zone.hand.hide()
 			phase_label.hide()
 			game_zone.player.player_anim.play("player_death")
-			AudioManager.play_music("Game Over.mp3")
 
 func _draw_phase():
 	phase_button.hide()
