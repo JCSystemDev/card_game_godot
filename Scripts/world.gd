@@ -1,22 +1,33 @@
-extends CanvasLayer
-
+extends Node2D
 var transition: bool
-var player_scene = load("res://Scenes/player_character.tscn")
-@onready var spawn_point: Marker2D = $"Spawn Point"
+@onready var player_pos: Marker2D = $"Player Position"
 @onready var pause_screen: Pause = $"Pause Screen"
+@onready var player = $Player
 
 func _ready():
 	pause_screen.hide()
 	pause_screen.parallax.hide()
 	AudioManager.play_music("4 - Village.ogg")
-	var player_character = player_scene.instantiate()
-	add_child(player_character)
-	player_character.global_position = spawn_point.position
+	_get_player_pos()
+	_set_player_pos(player_pos.position)
+
+func _process(delta):
+	_update_player_pos()
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel") && !Transition.in_transition && !DialogueManager.in_dialogue:
 		swap_pause_state()
+		
+func _update_player_pos():
+	DataManager.player_stats[0]["player_position_x"] = player.global_position.x
+	DataManager.player_stats[0]["player_position_y"] = player.global_position.y
 
+func _get_player_pos():
+	player_pos.global_position.x = DataManager.player_stats[0]["player_position_x"]
+	player_pos.global_position.y = DataManager.player_stats[0]["player_position_y"]
+
+func _set_player_pos(pos: Vector2i):
+	player.global_position = pos
 
 func swap_pause_state():
 	AudioManager.play_sound("Discard.wav")
@@ -24,17 +35,13 @@ func swap_pause_state():
 	if not pause_screen.visible:
 		get_tree().paused = true
 		Transition.play_transition("crossfade")
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.25).timeout
 		pause_screen.visible = true
 		pause_screen.parallax.show()
 		
 	elif pause_screen.visible:
 		get_tree().paused = false
 		Transition.play_transition("crossfade")
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.25).timeout
 		pause_screen.visible = false
 		pause_screen.parallax.hide()
-		
-		
-		
-		

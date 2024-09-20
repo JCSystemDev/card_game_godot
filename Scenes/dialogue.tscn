@@ -108,11 +108,13 @@ libraries = {
 }
 
 [node name="Yes Button" type="TextureButton" parent="."]
+visible = false
 offset_left = 472.0
 offset_top = 480.0
 offset_right = 537.0
 offset_bottom = 520.0
 size_flags_stretch_ratio = 0.0
+action_mode = 0
 texture_normal = ExtResource("5_2ef1j")
 texture_pressed = ExtResource("6_e82sv")
 texture_hover = ExtResource("7_h34tw")
@@ -121,10 +123,12 @@ texture_focused = ExtResource("7_h34tw")
 stretch_mode = 0
 
 [node name="No Button" type="TextureButton" parent="."]
+visible = false
 offset_left = 537.0
 offset_top = 480.0
 offset_right = 602.0
 offset_bottom = 520.0
+action_mode = 0
 texture_normal = ExtResource("6_15fxo")
 texture_pressed = ExtResource("9_dkakb")
 texture_hover = ExtResource("10_vx3nd")

@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://p754mgaf6eiq"]
+
+[ext_resource type="Script" path="res://Scripts/new_game.gd" id="1_muhlq"]
+[ext_resource type="Texture2D" uid="uid://bxg68syu5utk1" path="res://Assets/Sprites/Backgrounds/Background 1.png" id="2_4uyuq"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="3_xo25k"]
+[ext_resource type="Texture2D" uid="uid://ctbb154gdxli4" path="res://Assets/Sprites/Portraits/EggBoy.png" id="4_ca1fg"]
+[ext_resource type="Texture2D" uid="uid://qwviom2cb46i" path="res://Assets/Sprites/Portraits/EggGirl.png" id="5_gaysd"]
+
+[node name="NewGame" type="CanvasLayer"]
+layer = 0
+script = ExtResource("1_muhlq")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(896, 512)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(484, 270)
+scale = Vector2(2, 2)
+texture = ExtResource("2_4uyuq")
+
+[node name="Choose Character" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EggBoy" type="Sprite2D" parent="Choose Character"]
+position = Vector2(380, 240)
+scale = Vector2(4, 4)
+texture = ExtResource("4_ca1fg")
+
+[node name="EggGirl" type="Sprite2D" parent="Choose Character"]
+position = Vector2(580, 240)
+scale = Vector2(4, 4)
+texture = ExtResource("5_gaysd")
+
+[node name="A-Type" type="Button" parent="Choose Character"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = 46.0
+offset_right = -24.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xo25k")
+text = "A-TYPE"
+
+[node name="B-Type" type="Button" parent="Choose Character"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = 46.0
+offset_right = 176.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xo25k")
+text = "B-TYPE"
+
+[node name="Accept" type="Button" parent="Choose Character"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 118.0
+offset_right = 150.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xo25k")
+theme_override_font_sizes/font_size = 20
+text = "ACCEPT"
+
+[node name="LineEdit" type="LineEdit" parent="Choose Character"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -207.0
+offset_right = 176.0
+offset_bottom = -141.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xo25k")
+theme_override_font_sizes/font_size = 25
+placeholder_text = "INSERT NAME"
+max_length = 12
+expand_to_text_length = true
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+
+[connection signal="pressed" from="Choose Character/A-Type" to="." method="_on_a_type_pressed"]
+[connection signal="pressed" from="Choose Character/B-Type" to="." method="_on_b_type_pressed"]
+[connection signal="pressed" from="Choose Character/Accept" to="." method="_on_accept_pressed"]

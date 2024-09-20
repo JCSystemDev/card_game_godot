@@ -15,11 +15,11 @@ func unregister_area(area: InteractionArea):
 		active_areas.remove_at(index)
 		
 func _process(_delta):
-	if active_areas.size() > 0 && can_interact && !DialogueManager.in_dialogue:
+	if active_areas.size() > 0 and can_interact and !DialogueManager.dialogue_box.visible:
 		active_areas.sort_custom(_sort_by_distance_to_player)
 		interaction_label.text = active_areas[0].action_name
 		interaction_label.global_position = active_areas[0].global_position
-		interaction_label.global_position.y -= 60
+		interaction_label.global_position.y -= 80
 		interaction_label.global_position.x -= interaction_label.size.x / 2
 		interaction_label.show()
 	else:

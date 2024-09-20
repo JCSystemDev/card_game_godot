@@ -20,6 +20,6 @@ vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Label"]
 z_index = -1
-position = Vector2(71, 19)
-scale = Vector2(2.2, 2.2)
+position = Vector2(71, 20)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_yv7pn")

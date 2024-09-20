@@ -2,12 +2,15 @@ class_name PlayerCharacter extends CharacterBody2D
 
 var direction = Vector2()
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var player_sprite: Sprite2D = $Sprite2D
 
 func _ready():
-	DataManager.move_speed = 3
+	DataManager.in_battle = false
+	DataManager.move_speed = 4
+	player_sprite.set_texture(DataManager.player_sprite)
 
 func _physics_process(_delta):
-	if DialogueManager.dialogue_box.visible == false:
+	if !DialogueManager.dialogue_box.visible and !DataManager.in_battle:
 		if(Input.is_action_pressed("up") and direction.x == 0):
 			direction.y = -DataManager.move_speed
 			animation_player.play("walk_up")

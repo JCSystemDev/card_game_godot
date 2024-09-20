@@ -9,7 +9,7 @@ func _ready():
 	sprite_background.set_texture(background_sprite)
 
 func parallax_bg(delta_time) -> void:
-	get_node("ParallaxBackground").scroll_base_offset -= Vector2(1, 0) * speed * delta_time	
+	get_node("ParallaxBackground").scroll_base_offset -= Vector2(1, 1) * speed * delta_time	
 
 func _process(delta) -> void:
 	parallax_bg(delta)

@@ -15,7 +15,7 @@ func _ready():
 	cards_in_deck.set_text("D: "+str(quantity_deck_cards))
 
 func _get_cards():
-	for card in DataManager.deck_cards[0]["cards"]:
+	for card in DataManager.deck_cards[0]["deck_lv1"]:
 		deck_cards.append(card)
 		
 func _shuffle_deck():

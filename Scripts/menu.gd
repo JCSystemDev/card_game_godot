@@ -1,6 +1,7 @@
 extends Control
 
-@onready var game: PackedScene = load("res://Scenes/world.tscn")
+@onready var world_scene: PackedScene = load("res://Scenes/world.tscn")
+@onready var new_game_scene: PackedScene = load("res://Scenes/new_game.tscn")
 @onready var new_game: Button = $"Buttons/New Game"
 @onready var load_game: Button = $"Buttons/Continue Game"
 @onready var quit_game: Button = $"Buttons/Quit Game"
@@ -13,7 +14,7 @@ func _ready():
 		load_game.set_disabled(true)
 	
 func parallax_bg(delta_time) -> void:
-	get_node("ParallaxBackground").scroll_base_offset -= Vector2(1, 0) * 250 * delta_time	
+	get_node("ParallaxBackground").scroll_base_offset -= Vector2(1, 1) * 250 * delta_time	
 
 func _process(delta):
 	parallax_bg(delta)
@@ -24,13 +25,12 @@ func _on_quit_game_pressed():
 	quit_game.set_disabled(true)
 	
 func _on_new_game_pressed():
-	DataManager._new_game()
 	AudioManager.play_sound("Equip.wav")
-	Transition.load_scene(game, "transition")
+	Transition.load_scene(new_game_scene, "transition")
 	new_game.set_disabled(true)
 
 func _on_continue_game_pressed():
 	DataManager._load_game()
 	AudioManager.play_sound("Equip.wav")
-	Transition.load_scene(game, "transition")
+	Transition.load_scene(world_scene, "transition")
 	load_game.set_disabled(true)

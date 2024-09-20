@@ -1,7 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cs1nlk4gtmgvc"]
+[gd_scene load_steps=16 format=3 uid="uid://cs1nlk4gtmgvc"]
 
 [ext_resource type="Script" path="res://Scripts/player_character.gd" id="1_t7mjj"]
-[ext_resource type="Texture2D" uid="uid://bm5wk04igpvhc" path="res://Assets/Sprites/Player/Player.png" id="2_bkuoo"]
+[ext_resource type="Texture2D" uid="uid://cireq1ghhqs12" path="res://Assets/Sprites/Player/Boy.png" id="2_bkuoo"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="3_dk2ax"]
+[ext_resource type="Texture2D" uid="uid://b3htfekpaf1ij" path="res://Assets/Sprites/Player/Shadow.png" id="4_jurs2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77dt3"]
 size = Vector2(15, 8)
@@ -164,6 +166,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 process_mode = 1
+z_index = 1
 scale = Vector2(3, 3)
 collision_mask = 10
 script = ExtResource("1_t7mjj")
@@ -173,11 +176,25 @@ position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_77dt3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 texture = ExtResource("2_bkuoo")
 hframes = 4
-vframes = 4
+vframes = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_bfyxn")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
+position_smoothing_speed = 4.0
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+script = ExtResource("3_dk2ax")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, 7)
+texture = ExtResource("4_jurs2")

@@ -12,6 +12,7 @@ var current_state
 @onready var label_node: Node2D = $Label
 
 func _ready():
+	get_tree().paused = false
 	AudioManager.play_music("28 - Tension.ogg")
 	current_state = state.ingame
 	phase_label.set_text("START PHASE")
@@ -26,6 +27,7 @@ func _states(_state):
 		state.ingame:
 			pass
 		state.win:
+			DataManager.in_battle = false
 			AudioManager.play_music("11 - Clearing.ogg")
 			DataManager.player_stats[0]["player_exp"] += game_zone.enemy.exp_points
 			game_zone.notifications.exp_label.set_text(str("YOU GOT ",game_zone.enemy.exp_points," EXP POINTS"))
@@ -40,6 +42,7 @@ func _states(_state):
 			game_zone.hand.hide()
 			phase_label.hide()
 		state.lose:
+			DataManager.in_battle = false
 			AudioManager.play_music("10 - Dark Castle.ogg")
 			game_zone.notifications.endgame_label.set_text("YOU LOSE")
 			game_zone.notifications.animation_player.play("show")

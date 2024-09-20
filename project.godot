@@ -27,10 +27,10 @@ buses/default_bus_layout="res://Assets/Audio/audio_mixer.tres"
 
 Transition="*res://Scenes/transition.tscn"
 AudioManager="*res://Scenes/audio.tscn"
-DataManager="*res://Scripts/data.gd"
 DialogueManager="*res://Scenes/dialogue.tscn"
 InteractionManager="*res://Scenes/interaction.tscn"
 TweenManager="*res://Scripts/tweens.gd"
+DataManager="*res://Scenes/data.tscn"
 
 [display]
 

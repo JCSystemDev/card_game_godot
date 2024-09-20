@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c0cmqptbfi1nl" path="res://Assets/Sprites/UI/Ui/Icon/Spell/DefenseUpgrade.png" id="6_26f7v"]
 [ext_resource type="LabelSettings" uid="uid://djg4hy1teosjq" path="res://Styles/Label Font 2.tres" id="6_jd8nx"]
 [ext_resource type="Texture2D" uid="uid://btl83he2rrpwk" path="res://Assets/Sprites/UI/Ui/Icon/Items&Weapon/Money.png" id="7_t0fpa"]
-[ext_resource type="Texture2D" uid="uid://373xusfbumn7" path="res://Assets/Sprites/Portraits/Player.png" id="8_ir7dp"]
+[ext_resource type="Texture2D" uid="uid://373xusfbumn7" path="res://Assets/Sprites/Portraits/Boy.png" id="8_ir7dp"]
 [ext_resource type="Texture2D" uid="uid://dyos37njwcqw" path="res://Assets/Sprites/UI/Ui/Dialog/FacesetBox.png" id="8_px4qq"]
 
 [sub_resource type="Animation" id="Animation_4g26i"]

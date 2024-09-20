@@ -1,0 +1,22 @@
+[
+	{
+		"npc_name":"Eskimo",
+		"npc_sprite":"res://Assets/Sprites/Portraits/Eskimo.png",
+		"dialogue_start": "You will find freezing enemies in the iceland located to the east of here."
+	},
+	{
+		"npc_name":"Sultan",
+		"npc_sprite":"res://Assets/Sprites/Portraits/Sultan.png",
+		"dialogue_start": "You will find fiery enemies in the desert located to the west of here."
+	},
+	{
+		"npc_name":"Shaman",
+		"npc_sprite":"res://Assets/Sprites/Portraits/Shaman.png",
+		"dialogue_start": "You will find hidden enemies in the forest located to the northeast of here."
+	},
+	{
+		"npc_name":"Cave Girl",
+		"npc_sprite":"res://Assets/Sprites/Portraits/Cave Girl.png",
+		"dialogue_start": "You will find powerful enemies in the wasteland located to the northwest of here."
+	}
+]

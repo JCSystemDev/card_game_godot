@@ -4,6 +4,7 @@ var current_attack: int
 var current_defense: int
 var current_gold: int
 
+@onready var player_portrait: Sprite2D = $"Stats Display/Portrait"
 @onready var player_hp_label: Label = $"Stats Display/HP/HP Label"
 @onready var player_hp_bar: ProgressBar = $"Stats Display/HP/Health Bar/Player HP"
 @onready var player_attack_label: Label = $"Stats Display/Attack/Attack Label"
@@ -20,6 +21,7 @@ func _get_values():
 	current_defense = DataManager.player_stats[0]["player_defense"]
 
 func _set_values():
+	player_portrait.set_texture(DataManager.player_portrait)
 	player_hp_label.set_text(str("HP: ",current_hp,"/", DataManager.player_stats[0]["player_hp"] ))
 	player_hp_bar.set_max(float(DataManager.player_stats[0]["player_hp"]))
 	player_hp_bar.set_value(float(current_hp))
