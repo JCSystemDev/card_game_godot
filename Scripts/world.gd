@@ -9,19 +9,12 @@ func _ready():
 	pause_screen.parallax.hide()
 	AudioManager.play_music("4 - Village.ogg")
 	_get_player_pos()
-	_set_player_pos(player_pos.position)
-
-func _process(delta):
-	_update_player_pos()
+	_set_player_pos(player_pos.global_position)
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel") && !Transition.in_transition && !DialogueManager.in_dialogue:
 		swap_pause_state()
 		
-func _update_player_pos():
-	DataManager.player_stats[0]["player_position_x"] = player.global_position.x
-	DataManager.player_stats[0]["player_position_y"] = player.global_position.y
-
 func _get_player_pos():
 	player_pos.global_position.x = DataManager.player_stats[0]["player_position_x"]
 	player_pos.global_position.y = DataManager.player_stats[0]["player_position_y"]

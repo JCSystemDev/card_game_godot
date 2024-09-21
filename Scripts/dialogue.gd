@@ -38,9 +38,8 @@ func _close_dialogue():
 	
 func _on_yes_button_pressed():
 	await get_tree().create_timer(0.2).timeout
-	DataManager.enemy_summon = avatar_name.text
-	Transition.load_scene(game_zone, "transition")
-	AudioManager.play_sound("Summon.wav")
+	DataManager._save_game()
+	AudioManager.play_sound("Equip.wav")
 	in_dialogue = false
 	dialogue_box.visible = false
 

@@ -15,7 +15,8 @@ var in_battle: bool
 var move_speed: float
 var player_sprite: Texture2D
 var player_portrait: Texture2D
-var player_position
+var player_position_x: float
+var player_position_y: float
 var player_stats
 var player_stats_load
 var player_stats_default = [{
@@ -28,7 +29,7 @@ var player_stats_default = [{
 	"player_gold": 6,
 	"player_exp": 0,
 	"player_position_x": 480,
-	"player_position_y": 270,
+	"player_position_y": 416,
 	"player_sprite":"",
 	"player_portrait":"" 
 	}]
@@ -46,7 +47,7 @@ func _get_deck(lv_deck: String):
 		deck_list.append(card)
 
 # Build Enemy List
-func _get_enemies(zone: String, enemy_list: Array):
+func _get_enemies(zone: String):
 	enemies_list = []
 	for enemy in enemies:
 		if enemy["enemy_zone"] == zone:
@@ -62,6 +63,8 @@ func _new_game():
 	player_stats = player_stats_default
 
 func _save_game():
+	player_stats[0]["player_position_x"] = player_position_x
+	player_stats[0]["player_position_y"] = player_position_y
 	player_stats = JSON.stringify(player_stats)
 	var saved_file = FileAccess.open("user://player_stats_saved.json", FileAccess.WRITE)
 	saved_file.store_string(player_stats)

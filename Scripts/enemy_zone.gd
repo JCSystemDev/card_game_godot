@@ -15,7 +15,7 @@ func _on_body_exited(body):
 func _on_timer_timeout():
 	get_tree().paused = true
 	DataManager.in_battle = true
-	DataManager._get_enemies(zone_name, DataManager.enemies_list)
+	DataManager._get_enemies(zone_name)
 	DataManager.enemy_summon = DataManager.enemies_list[randi_range(0, DataManager.enemies_list.size() - 1)]
 	Transition.load_scene(game_zone, "transition")
 	AudioManager.play_sound("Summon.wav")

@@ -10,6 +10,8 @@ func _ready():
 	player_sprite.set_texture(DataManager.player_sprite)
 
 func _physics_process(_delta):
+	DataManager.player_position_x = global_position.x
+	DataManager.player_position_y = global_position.y
 	if !DialogueManager.dialogue_box.visible and !DataManager.in_battle:
 		if(Input.is_action_pressed("up") and direction.x == 0):
 			direction.y = -DataManager.move_speed
