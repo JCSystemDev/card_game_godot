@@ -1,7 +1,7 @@
 extends CanvasLayer
 class_name Pause
 @onready var menu: PackedScene = load("res://Scenes/menu.tscn")
-@export var world: CanvasLayer
+@export var world: Node2D
 @onready var parallax: ParallaxBackground = $ParallaxBackground
 @onready var player_name_label: Label = $Player/Name
 @onready var player_portrait: Sprite2D = $"Player/Player Portrait"

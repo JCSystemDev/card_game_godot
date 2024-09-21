@@ -65,9 +65,9 @@ func _new_game():
 func _save_game():
 	player_stats[0]["player_position_x"] = player_position_x
 	player_stats[0]["player_position_y"] = player_position_y
-	player_stats = JSON.stringify(player_stats)
+	var player_stats_save = JSON.stringify(player_stats)
 	var saved_file = FileAccess.open("user://player_stats_saved.json", FileAccess.WRITE)
-	saved_file.store_string(player_stats)
+	saved_file.store_string(player_stats_save)
 	saved_file.close()
 
 func _load_game():
