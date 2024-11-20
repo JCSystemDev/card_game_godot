@@ -7,7 +7,7 @@ var transition: bool
 func _ready():
 	pause_screen.hide()
 	pause_screen.parallax.hide()
-	AudioManager.play_music("4 - Village.ogg")
+	AudioManager.play_music("29 - Lament.ogg")
 	_get_player_pos()
 	_set_player_pos(player_pos.global_position)
 

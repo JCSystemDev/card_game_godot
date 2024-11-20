@@ -2,13 +2,15 @@ extends Node2D
 class_name Data
 
 # Data Base Access
-var cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/cards.json"))
-var deck_cards = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/deck.json"))
-var enemies = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/enemies.json"))
+var questions = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/question.json"))
 var npcs = JSON.parse_string(FileAccess.get_file_as_string("res://Data Base/npcs.json"))
 
-# Deck
-var deck_list: Array = []
+# Questions
+var question_list: Array = []
+var current_type
+var current_question
+var current_answer
+var current_options
 
 # Player Variables
 var in_battle: bool
@@ -20,13 +22,9 @@ var player_position_y: float
 var player_stats
 var player_stats_load
 var player_stats_default = [{
-	
 	"player_name": "",
 	"player_level": 1,
-	"player_hp": 20,
-	"player_attack": 10,
-	"player_defense": 3,
-	"player_gold": 6,
+	"player_hp": 5,
 	"player_exp": 0,
 	"player_position_x": 480,
 	"player_position_y": 416,
@@ -34,25 +32,29 @@ var player_stats_default = [{
 	"player_portrait":"" 
 	}]
 
-# Enemy Variables
-var enemy_summon: String
-var enemies_list: Array
+# NPC Variables
+var npc_summon: String
+var npc_negative: String
+var npc_question: String
+var npc_name: String
+var npc_texture: Texture2D
 
-func _ready():
-	_get_deck("deck_lv1")
-
-# Build Deck
-func _get_deck(lv_deck: String):
-	for card in deck_cards[0][lv_deck]:
-		deck_list.append(card)
-
-# Build Enemy List
-func _get_enemies(zone: String):
-	enemies_list = []
-	for enemy in enemies:
-		if enemy["enemy_zone"] == zone:
-			enemies_list.append(enemy["enemy_name"])
-		
+# Build Questions
+func _get_question(code_question: String):
+	for question in questions:
+		if question["question_code"] == code_question:
+			current_question = question["question"]
+			current_answer = question["answer"]
+			current_options = question["options"]
+			
+func _get_question_list(type_question: String):
+	for question in questions:
+		if question["question_type"] == type_question:
+			question_list.append(question["question_code"])
+	question_list.shuffle()
+	print(question_list)
+			
+			
 func _get_player_texture(player_texture: String, portrait_texture: String):
 	player_stats_default[0]["player_sprite"] = player_texture
 	player_stats_default[0]["player_portrait"] = portrait_texture

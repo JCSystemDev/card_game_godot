@@ -1,27 +1,39 @@
 [
 	{
-		"npc_name":"Eskimo",
-		"npc_sprite":"res://Assets/Sprites/Portraits/Eskimo.png",
-		"dialogue": "You will find freezing enemies in the iceland located to the east of here."
+		"npc_name":"BeardCode",
+		"npc_realname":"Barba Programa",
+		"npc_sprite":"res://Assets/Sprites/Portraits/BeardCode.png",
+		"dialogue":"cof cof. Deseas enfrentar un reto sobre programacion?.",
+		"negative":"cof cof. Pues tu te lo pierdes Novato.",
+		"npc_exp":5,
+		"npc_type":"Code"
+		
 	},
 	{
-		"npc_name":"Sultan",
-		"npc_sprite":"res://Assets/Sprites/Portraits/Sultan.png",
-		"dialogue": "You will find fiery enemies in the desert located to the west of here."
+		"npc_name":"NerdHardware",
+		"npc_realname":"PC Maniaco",
+		"npc_sprite":"res://Assets/Sprites/Portraits/NerdHardware.png",
+		"dialogue": "jeje. Quieres demostrar tus conocimientos sobre Hardware?.",
+		"negative":"jeje. Parece que no eres muy bueno en Hardware.",
+		"npc_exp":5,
+		"npc_type":"HW"
 	},
 	{
-		"npc_name":"Shaman",
-		"npc_sprite":"res://Assets/Sprites/Portraits/Shaman.png",
-		"dialogue": "You will find hidden enemies in the forest located to the northeast of here."
+		"npc_name": "PunkHack",
+		"npc_realname":"Punk Hacker",
+		"npc_sprite":"res://Assets/Sprites/Portraits/PunkHack.png",
+		"dialogue": "Vas a pelear contra este amo del Hacking?.",
+		"negative":"Ya veo. Parece que mis habilidades te intimidaron.",
+		"npc_exp":5,
+		"npc_type":"CS"
 	},
 	{
-		"npc_name":"Cave Girl",
-		"npc_sprite":"res://Assets/Sprites/Portraits/Cave Girl.png",
-		"dialogue": "You will find powerful enemies in the wasteland located to the northwest of here."
-	},
-	{
-		"npc_name":"Statue",
-		"npc_sprite":"res://Assets/Sprites/Portraits/Statue.png",
-		"dialogue": "Do you want to save the game?"
+		"npc_name":"ManagerDB",
+		"npc_realname":"Admin BD",
+		"npc_sprite":"res://Assets/Sprites/Portraits/ManagerDB.png",
+		"dialogue": "Oye Novato. Aceptas un duelo de Bases de Datos?.",
+		"negative":"Bueno. No todos podemos ser expertos en Bases de Datos.",
+		"npc_exp":5,
+		"npc_type":"DB"
 	}
 ]

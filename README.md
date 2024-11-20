@@ -1,2 +1,2 @@
-# card_game_godot
-Proyecto de juego de cartas RPG en Godot Engine
+# quiz_game_godot
+Proyecto de juego de Preguntas en Godot Engine

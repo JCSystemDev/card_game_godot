@@ -6,8 +6,6 @@ class_name Pause
 @onready var player_name_label: Label = $Player/Name
 @onready var player_portrait: Sprite2D = $"Player/Player Portrait"
 @onready var player_level_label: Label = $Player/Level
-@onready var player_attack_label: Label = $Player/Attack
-@onready var player_defense_label: Label = $Player/Defense
 @onready var player_hp_label: Label = $Player/HP
 @onready var player_exp_label: Label = $"Player/Exp"
 @onready var resume_button: Button = $"Buttons/Resume Button"
@@ -19,8 +17,6 @@ func _ready():
 	player_portrait.set_texture(DataManager.player_portrait)
 	player_level_label.set_text(str("LV: ",DataManager.player_stats[0]["player_level"]))
 	player_hp_label.set_text(str("HP: ",DataManager.player_stats[0]["player_hp"],"/",DataManager.player_stats[0]["player_hp"]))
-	player_attack_label.set_text(str("ATK: ",DataManager.player_stats[0]["player_attack"]))
-	player_defense_label.set_text(str("DEF: ",DataManager.player_stats[0]["player_defense"]))
 	player_exp_label.set_text(str("EXP: ",DataManager.player_stats[0]["player_exp"]))
 	
 func parallax_bg(delta_time) -> void:

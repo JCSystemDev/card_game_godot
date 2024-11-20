@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://p754mgaf6eiq"]
+[gd_scene load_steps=8 format=3 uid="uid://p754mgaf6eiq"]
 
 [ext_resource type="Script" path="res://Scripts/new_game.gd" id="1_muhlq"]
-[ext_resource type="Texture2D" uid="uid://bxg68syu5utk1" path="res://Assets/Sprites/Backgrounds/Background 1.png" id="2_4uyuq"]
-[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="3_xo25k"]
-[ext_resource type="Texture2D" uid="uid://ctbb154gdxli4" path="res://Assets/Sprites/Portraits/EggBoy.png" id="4_ca1fg"]
-[ext_resource type="Texture2D" uid="uid://qwviom2cb46i" path="res://Assets/Sprites/Portraits/EggGirl.png" id="5_gaysd"]
+[ext_resource type="Texture2D" uid="uid://dykpbio4a57f2" path="res://Assets/Sprites/Backgrounds/Background 5.png" id="2_u7t5e"]
+[ext_resource type="Texture2D" uid="uid://cwix5fbhig8q0" path="res://Assets/Sprites/Portraits/Knight.png" id="3_smxtk"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="3_xo25k"]
+[ext_resource type="Texture2D" uid="uid://deva1v0f38e5f" path="res://Assets/Sprites/Portraits/Wizard.png" id="4_qdwlj"]
+[ext_resource type="Texture2D" uid="uid://b84uth18bitmj" path="res://Assets/Sprites/Portraits/Viking.png" id="5_7jc60"]
+[ext_resource type="Texture2D" uid="uid://80oojqiljvjk" path="res://Assets/Sprites/Portraits/Goblin.png" id="6_6vp2t"]
 
 [node name="NewGame" type="CanvasLayer"]
 layer = 0
@@ -18,7 +20,7 @@ motion_mirroring = Vector2(896, 512)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(484, 270)
 scale = Vector2(2, 2)
-texture = ExtResource("2_4uyuq")
+texture = ExtResource("2_u7t5e")
 
 [node name="Choose Character" type="Control" parent="."]
 layout_mode = 3
@@ -28,15 +30,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="EggBoy" type="Sprite2D" parent="Choose Character"]
-position = Vector2(380, 240)
+[node name="Knight" type="Sprite2D" parent="Choose Character"]
+position = Vector2(260, 240)
 scale = Vector2(4, 4)
-texture = ExtResource("4_ca1fg")
+texture = ExtResource("3_smxtk")
 
-[node name="EggGirl" type="Sprite2D" parent="Choose Character"]
-position = Vector2(580, 240)
+[node name="Wizard" type="Sprite2D" parent="Choose Character"]
+position = Vector2(407, 240)
 scale = Vector2(4, 4)
-texture = ExtResource("5_gaysd")
+texture = ExtResource("4_qdwlj")
+
+[node name="Viking" type="Sprite2D" parent="Choose Character"]
+position = Vector2(555, 240)
+scale = Vector2(4, 4)
+texture = ExtResource("5_7jc60")
+
+[node name="Goblin" type="Sprite2D" parent="Choose Character"]
+position = Vector2(700, 240)
+scale = Vector2(4, 4)
+texture = ExtResource("6_6vp2t")
 
 [node name="A-Type" type="Button" parent="Choose Character"]
 layout_mode = 1
@@ -45,14 +57,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -176.0
+offset_left = -286.0
 offset_top = 46.0
-offset_right = -24.0
+offset_right = -153.0
 offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_xo25k")
-text = "A-TYPE"
+text = "TIPO-A"
 
 [node name="B-Type" type="Button" parent="Choose Character"]
 layout_mode = 1
@@ -61,14 +73,46 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 24.0
+offset_left = -140.0
 offset_top = 46.0
-offset_right = 176.0
+offset_right = -7.0
 offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_xo25k")
-text = "B-TYPE"
+text = "TIPO-B"
+
+[node name="C-Type" type="Button" parent="Choose Character"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = 46.0
+offset_right = 141.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xo25k")
+text = "TIPO-C"
+
+[node name="D-Type" type="Button" parent="Choose Character"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 153.0
+offset_top = 46.0
+offset_right = 286.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_xo25k")
+text = "TIPO-D"
 
 [node name="Accept" type="Button" parent="Choose Character"]
 layout_mode = 1
@@ -85,7 +129,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_xo25k")
 theme_override_font_sizes/font_size = 20
-text = "ACCEPT"
+text = "ACEPTAR"
 
 [node name="LineEdit" type="LineEdit" parent="Choose Character"]
 layout_mode = 1
@@ -102,7 +146,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_xo25k")
 theme_override_font_sizes/font_size = 25
-placeholder_text = "INSERT NAME"
+placeholder_text = "TU NOMBRE"
+alignment = 1
 max_length = 12
 expand_to_text_length = true
 context_menu_enabled = false
@@ -110,4 +155,6 @@ virtual_keyboard_enabled = false
 
 [connection signal="pressed" from="Choose Character/A-Type" to="." method="_on_a_type_pressed"]
 [connection signal="pressed" from="Choose Character/B-Type" to="." method="_on_b_type_pressed"]
+[connection signal="pressed" from="Choose Character/C-Type" to="." method="_on_c_type_pressed"]
+[connection signal="pressed" from="Choose Character/D-Type" to="." method="_on_d_type_pressed"]
 [connection signal="pressed" from="Choose Character/Accept" to="." method="_on_accept_pressed"]

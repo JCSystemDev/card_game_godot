@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6viku28itdwd" path="res://Assets/Sprites/Templates/Screen Marquee.png" id="2_g0y1e"]
 [ext_resource type="FontFile" uid="uid://8q3wd1f811wn" path="res://Assets/Sprites/UI/Ui/Font/NormalFont.ttf" id="4_2xc0f"]
 [ext_resource type="Theme" uid="uid://whtf1cxg48ud" path="res://Styles/button.tres" id="4_f1tme"]
-[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="5_xh5vh"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="5_xh5vh"]
 
 [sub_resource type="Animation" id="Animation_wpq26"]
 length = 0.001
@@ -32,7 +32,6 @@ _data = {
 }
 
 [node name="Notifications" type="Node2D"]
-visible = false
 position = Vector2(320, 100)
 script = ExtResource("1_nx5iy")
 
@@ -43,7 +42,7 @@ position = Vector2(160, 100)
 
 [node name="Background" type="Sprite2D" parent="Endgame Notification/BG"]
 position = Vector2(0, -30)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(3, 3)
 texture = ExtResource("2_g0y1e")
 
 [node name="Lose Buttons" type="Node2D" parent="Endgame Notification"]
@@ -57,7 +56,7 @@ offset_right = 129.0
 offset_bottom = 58.0
 theme = ExtResource("4_f1tme")
 theme_override_font_sizes/font_size = 20
-text = "RETRY"
+text = "REINTENTAR"
 
 [node name="Exit Button" type="Button" parent="Endgame Notification/Lose Buttons"]
 offset_left = -25.0
@@ -66,7 +65,7 @@ offset_right = 129.0
 offset_bottom = 99.0
 theme = ExtResource("4_f1tme")
 theme_override_font_sizes/font_size = 20
-text = "TO WORLD"
+text = "SALIR"
 
 [node name="Win Buttons" type="Node2D" parent="Endgame Notification"]
 visible = false
@@ -79,27 +78,27 @@ offset_right = 235.0
 offset_bottom = 91.0
 theme_override_fonts/font = ExtResource("4_2xc0f")
 theme_override_font_sizes/font_size = 20
-text = "TO  WORLD"
+text = "SALIR"
 
 [node name="Exp" type="Label" parent="Endgame Notification/Win Buttons"]
-offset_left = -42.0
-offset_top = 5.0
-offset_right = 363.0
-offset_bottom = 29.0
+offset_left = -74.0
+offset_top = 12.0
+offset_right = 394.0
+offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("5_xh5vh")
-theme_override_font_sizes/font_size = 15
-text = "YOU GOT 100 EXP POINTS"
+theme_override_font_sizes/font_size = 11
+text = "GANASTE 100 PUNTOS DE EXP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Endgame Notification"]
-offset_left = -104.0
+offset_left = -160.0
 offset_top = -110.0
-offset_right = 104.0
+offset_right = 161.0
 offset_bottom = -86.0
 theme_override_fonts/font = ExtResource("5_xh5vh")
 theme_override_font_sizes/font_size = 15
-text = "END GAME"
+text = "FIN DE LA PARTIDA"
 horizontal_alignment = 1
 vertical_alignment = 1
 

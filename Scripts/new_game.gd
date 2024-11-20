@@ -24,13 +24,27 @@ func _on_accept_pressed():
 
 func _on_a_type_pressed():
 	AudioManager.play_sound("Accept.wav")
-	DataManager._get_player_texture("res://Assets/Sprites/Player/EggBoy.png", "res://Assets/Sprites/Portraits/EggBoy.png")
+	DataManager._get_player_texture("res://Assets/Sprites/Player/Knight.png", "res://Assets/Sprites/Portraits/Knight.png")
 	if player_name.text != "":
 		accept_button.set_disabled(false)
 
 
 func _on_b_type_pressed():
 	AudioManager.play_sound("Accept.wav")
-	DataManager._get_player_texture("res://Assets/Sprites/Player/EggGirl.png", "res://Assets/Sprites/Portraits/EggGirl.png")
+	DataManager._get_player_texture("res://Assets/Sprites/Player/Wizard.png", "res://Assets/Sprites/Portraits/Wizard.png")
+	if player_name.text != "":
+		accept_button.set_disabled(false)
+
+
+func _on_c_type_pressed():
+	AudioManager.play_sound("Accept.wav")
+	DataManager._get_player_texture("res://Assets/Sprites/Player/Viking.png", "res://Assets/Sprites/Portraits/Viking.png")
+	if player_name.text != "":
+		accept_button.set_disabled(false)
+
+
+func _on_d_type_pressed():
+	AudioManager.play_sound("Accept.wav")
+	DataManager._get_player_texture("res://Assets/Sprites/Player/Goblin.png", "res://Assets/Sprites/Portraits/Goblin.png")
 	if player_name.text != "":
 		accept_button.set_disabled(false)

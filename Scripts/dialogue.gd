@@ -6,10 +6,14 @@ extends CanvasLayer
 @onready var dialogue_box: CanvasLayer = $"."
 @onready var yes_button: TextureButton = $"Yes Button"
 @onready var no_button: TextureButton = $"No Button"
+var pressed_yes: bool
+var pressed_no: bool
 var in_dialogue: bool
 var game_zone: PackedScene = load("res://Scenes/game_zone.tscn")
 
 func _ready():
+	pressed_yes = false
+	pressed_no = false
 	in_dialogue = false
 	dialogue_box.visible = false
 
@@ -23,31 +27,41 @@ func _input(event):
 		_close_dialogue()
 
 func _play_dialogue_box():
-	if !dialogue_box.visible:
-		AudioManager.play_sound("Click.wav")
-		dialogue_animation.play("write_text")
-		await dialogue_animation.animation_finished
-		in_dialogue = true
+	AudioManager.play_sound("Click.wav")
+	dialogue_animation.play("write_text")
+	await dialogue_animation.animation_finished
+	in_dialogue = true
+	pressed_yes = false
+	pressed_no = false
 	
 func _close_dialogue():
 	if in_dialogue:
 		AudioManager.play_sound("Discard.wav")
 		in_dialogue = false
 		dialogue_box.visible = false
+		pressed_yes = false
+		pressed_no = false
 		
 	
 func _on_yes_button_pressed():
 	await get_tree().create_timer(0.2).timeout
-	DataManager._save_game()
 	AudioManager.play_sound("Equip.wav")
 	in_dialogue = false
 	dialogue_box.visible = false
+	pressed_yes = true
+	get_tree().paused = true
+	DataManager.npc_summon = avatar_name.text
+	DataManager.in_battle = true
+	Transition.load_scene(game_zone, "transition")
+	AudioManager.play_sound("Summon.wav")
 
 func _on_no_button_pressed():
 	await get_tree().create_timer(0.2).timeout
 	AudioManager.play_sound("Discard.wav")
 	yes_button.visible = false
 	no_button.visible = false
-	in_dialogue = false
-	dialogue_box.visible = false
+	pressed_no = true
+	_load_dialogue_box(DataManager.npc_negative, DataManager.npc_texture, DataManager.npc_name)
+	_play_dialogue_box()
+	
 	

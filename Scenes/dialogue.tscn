@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_ofgcj"]
 [ext_resource type="Texture2D" uid="uid://bpta8vn2ypwib" path="res://Assets/Sprites/UI/Ui/Dialog/DialogBoxFaceset.png" id="2_cw0m0"]
+[ext_resource type="Texture2D" uid="uid://guux0hvi0ui" path="res://Assets/Sprites/Portraits/PunkHack.png" id="3_gc3wj"]
 [ext_resource type="Texture2D" uid="uid://hjsdbys4ql6v" path="res://Assets/Sprites/UI/Ui/Dialog/YesButton.png" id="5_2ef1j"]
-[ext_resource type="Texture2D" uid="uid://bhet3c7hydv" path="res://Assets/Sprites/Portraits/Slime.png" id="5_vappm"]
 [ext_resource type="Texture2D" uid="uid://bnac8nbjydhb" path="res://Assets/Sprites/UI/Ui/Dialog/NoButton.png" id="6_15fxo"]
 [ext_resource type="Texture2D" uid="uid://b65f4eafnwesx" path="res://Assets/Sprites/UI/Ui/Dialog/YesButton(Hover).png" id="6_e82sv"]
 [ext_resource type="Texture2D" uid="uid://dfc2mrbnr8cme" path="res://Assets/Sprites/UI/Ui/Dialog/YesButton(Pressed).png" id="7_h34tw"]
-[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="7_xk3jm"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="7_xk3jm"]
 [ext_resource type="Texture2D" uid="uid://bg642ax365tw5" path="res://Assets/Sprites/UI/Ui/Dialog/NoButton(Hover).png" id="9_dkakb"]
 [ext_resource type="Texture2D" uid="uid://c8a8mwmcbkbdd" path="res://Assets/Sprites/UI/Ui/Dialog/NoButton(Pressed).png" id="10_vx3nd"]
 
@@ -76,17 +76,17 @@ position = Vector2(-56, -16)
 
 [node name="Avatar" type="Sprite2D" parent="Character Avatar"]
 position = Vector2(213, 490)
-scale = Vector2(2.4, 2.4)
-texture = ExtResource("5_vappm")
+scale = Vector2(3, 3)
+texture = ExtResource("3_gc3wj")
 
 [node name="Name" type="Label" parent="Character Avatar"]
-offset_left = 162.0
+offset_left = 159.0
 offset_top = 410.0
-offset_right = 325.0
+offset_right = 330.0
 offset_bottom = 429.0
 theme_override_fonts/font = ExtResource("7_xk3jm")
 theme_override_font_sizes/font_size = 10
-text = "Haunter Tree"
+text = "Barba Programa"
 horizontal_alignment = 1
 vertical_alignment = 1
 

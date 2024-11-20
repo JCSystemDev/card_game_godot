@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://27e77bi2qfme"]
+
+[ext_resource type="Script" path="res://Scripts/question.gd" id="1_g5a7y"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="1_iiwj6"]
+
+[node name="Question" type="Node2D"]
+script = ExtResource("1_g5a7y")
+
+[node name="Time" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 450.0
+offset_top = 20.0
+offset_right = 506.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 20
+text = "TIME: 20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Time"]
+process_callback = 0
+autostart = true
+
+[node name="Question" type="Label" parent="."]
+offset_top = 290.0
+offset_right = 960.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 15
+text = "Pregunta?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button A" type="Button" parent="."]
+offset_left = 76.0
+offset_top = 375.0
+offset_right = 476.0
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 15
+text = "Pepito los palotes de la pregunta"
+autowrap_mode = 2
+
+[node name="Button B" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 375.0
+offset_right = 884.0
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 15
+text = "B) JUANITO"
+autowrap_mode = 2
+
+[node name="Button C" type="Button" parent="."]
+offset_left = 76.0
+offset_top = 455.0
+offset_right = 476.0
+offset_bottom = 527.0
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 15
+text = "B) DIEGUITO"
+autowrap_mode = 2
+
+[node name="Button D" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 455.0
+offset_right = 884.0
+offset_bottom = 526.0
+theme_override_fonts/font = ExtResource("1_iiwj6")
+theme_override_font_sizes/font_size = 15
+text = "D) PABLITO"
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button A" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="Button B" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="Button C" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="Button D" to="." method="_on_button_d_pressed"]

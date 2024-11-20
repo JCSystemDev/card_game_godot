@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/pause.gd" id="1_tussv"]
 [ext_resource type="Texture2D" uid="uid://dyos37njwcqw" path="res://Assets/Sprites/UI/Ui/Dialog/FacesetBox.png" id="2_avlft"]
-[ext_resource type="Texture2D" uid="uid://373xusfbumn7" path="res://Assets/Sprites/Portraits/Boy.png" id="2_hj4ix"]
-[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8_bit_hud/8-bit-hud.ttf" id="4_kc4od"]
+[ext_resource type="FontFile" uid="uid://qm513m47rjve" path="res://Assets/Fonts/8-bit-hud.ttf" id="4_kc4od"]
 [ext_resource type="LabelSettings" uid="uid://djg4hy1teosjq" path="res://Styles/Label Font 2.tres" id="5_8cxim"]
 [ext_resource type="LabelSettings" uid="uid://3qh2suggr5sg" path="res://Styles/Label Font.tres" id="5_a0kne"]
+[ext_resource type="Texture2D" uid="uid://cwix5fbhig8q0" path="res://Assets/Sprites/Portraits/Knight.png" id="5_rg5mu"]
 [ext_resource type="FontFile" uid="uid://8q3wd1f811wn" path="res://Assets/Sprites/UI/Ui/Font/NormalFont.ttf" id="6_6balk"]
 [ext_resource type="Texture2D" uid="uid://6viku28itdwd" path="res://Assets/Sprites/Templates/Screen Marquee.png" id="8_jykdq"]
 [ext_resource type="Texture2D" uid="uid://bg1y7eyqygwhm" path="res://Assets/Sprites/Backgrounds/Background 4.png" id="9_nhv27"]
@@ -49,11 +49,13 @@ _data = {
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3
 layer = 2
+visible = false
 script = ExtResource("1_tussv")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 process_mode = 3
 layer = 2
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 process_mode = 3
@@ -81,8 +83,9 @@ scale = Vector2(4, 4)
 texture = ExtResource("2_avlft")
 
 [node name="Player Portrait" type="Sprite2D" parent="Player"]
-scale = Vector2(4, 4)
-texture = ExtResource("2_hj4ix")
+position = Vector2(0, 2)
+scale = Vector2(4.7, 4.7)
+texture = ExtResource("5_rg5mu")
 
 [node name="Name" type="Label" parent="Player"]
 offset_left = 136.0
@@ -103,22 +106,6 @@ text = "LV. 99"
 label_settings = ExtResource("5_a0kne")
 vertical_alignment = 1
 
-[node name="Attack" type="Label" parent="Player"]
-offset_left = 135.0
-offset_right = 227.0
-offset_bottom = 32.0
-text = "ATK 99"
-label_settings = ExtResource("5_a0kne")
-vertical_alignment = 1
-
-[node name="Defense" type="Label" parent="Player"]
-offset_left = 227.0
-offset_right = 354.0
-offset_bottom = 32.0
-text = "DEF 99"
-label_settings = ExtResource("5_a0kne")
-vertical_alignment = 1
-
 [node name="HP" type="Label" parent="Player"]
 offset_left = 227.0
 offset_top = -32.0
@@ -129,9 +116,8 @@ vertical_alignment = 1
 
 [node name="Exp" type="Label" parent="Player"]
 offset_left = 135.0
-offset_top = 32.0
 offset_right = 306.0
-offset_bottom = 64.0
+offset_bottom = 32.0
 text = "EXP 100"
 label_settings = ExtResource("5_a0kne")
 vertical_alignment = 1
@@ -162,7 +148,7 @@ offset_right = 347.0
 offset_bottom = 82.0
 theme_override_fonts/font = ExtResource("6_6balk")
 theme_override_font_sizes/font_size = 25
-text = "RESUME
+text = "VOLVER
 "
 
 [node name="Exit Button" type="Button" parent="Buttons"]
@@ -172,7 +158,7 @@ offset_right = 347.0
 offset_bottom = 128.0
 theme_override_fonts/font = ExtResource("6_6balk")
 theme_override_font_sizes/font_size = 25
-text = "MAIN MENU"
+text = "SALIR"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -195,7 +181,7 @@ offset_right = 205.0
 offset_bottom = 68.0
 theme_override_fonts/font = ExtResource("4_kc4od")
 theme_override_font_sizes/font_size = 20
-text = "GAME SAVED"
+text = "GUARDADO"
 horizontal_alignment = 1
 vertical_alignment = 1
 

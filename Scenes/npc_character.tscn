@@ -25,6 +25,7 @@ animation = &"idle"
 
 [node name="Interaction Area" parent="." instance=ExtResource("3_mjvkf")]
 scale = Vector2(2.5, 2.5)
+action_name = "HABLAR"
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(0, 6.66667)
